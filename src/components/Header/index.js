@@ -1,13 +1,18 @@
 import React from "react";
 import Nav from '../Nav';
 
-const Header = () => {
+const Header = (props) => {
 
-  
+  const {
+    categories
+  } = props
+
   return (
     <header>
       <h1>Noé Navarro</h1>
-      <Nav></Nav>
+      <Nav
+        categories={categories}
+      ></Nav>
     </header>
   )
 }
