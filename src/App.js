@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import Nav from './components/Nav';
+import Sidebar from './components/Sidebar';
 
 function App() {
   // establish categories for conditional rendering
@@ -26,12 +26,12 @@ function App() {
   // set category state 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
-
   return (
     <div>
       <Header
         categories={categories}
       ></Header>
+      <Sidebar></Sidebar>
     </div>
   );
 }
