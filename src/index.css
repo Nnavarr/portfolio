@@ -11,3 +11,227 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --green-color: #00FB11;
+  --secondary-color: #D4DCD6;
+  --header-color: black;
+}
+
+/* General HTML elements */
+h1 {
+  color: var(--green-color);
+}
+
+/* header & navigation bar */
+header {
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+header h1 {
+  padding-left: 15px;
+}
+
+header nav ul {
+  align-items: stretch;
+  color: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding-right: 15px;
+  padding-top: 10px;
+}
+
+header nav ul li span {
+  background: var(--secondary-color);
+  border: 1px solid black;
+  color: var(--header-color);
+  font-size: 25px;
+  font-weight: ligher;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+/* main contect flexbox container */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* main content */
+.main-content {
+  flex: 1;
+  margin-top: 0px;
+  margin-left: 8px;
+  padding: 10px;
+}
+
+/* home */
+.home {
+  display: flex;
+  background-color: var(--secondary-color);
+  border-bottom: .5px solid black;
+  border-left: .5px solid black;
+  border-right: .5px solid black;
+}
+
+.home img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.home .socials h2 {
+  text-align: center;
+  margin: 5px 5px;
+}
+
+/* social image container */
+.home .socials .social-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.home .socials .social-images a {
+  height: 50px;
+  width: 50px;
+}
+
+/* socials image sizing */
+#GitHub {
+  height: 50px;
+  margin: 0;
+  text-align: center;
+  width: 50px;
+}
+
+#LinkedIn {
+  height: 40px;
+  margin-top:5px;
+  margin-left:5px;
+  text-align: center;
+  width: 40px;
+  
+}
+
+/* about me */
+.aboutme {
+  display: block;
+  position: relative;
+}
+
+/* projects: container */
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+/* main project container */
+.project-main {
+  justify-content: center;
+}
+
+/* second row of projects */
+.project-second {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* project banners - main */
+.banner-main {
+  position: relative;
+  text-align: left;
+}
+
+.banner-main img {
+  height: auto;
+  width: 100%;
+}
+
+/* project banners - secondary */
+.banner-secondary {
+  align-content: space-evenly;
+  text-align: left;
+  position: relative;
+  height: 100%;
+}
+
+.banner-secondary img {
+  flex: 1;
+  width: 100%;
+}
+
+/* project banners - primary */
+.banner-text {
+  background-color: black;
+  bottom: 9px;
+  color: var(--green-color);
+  left: 16px;
+  padding: 5px;
+  position: absolute;
+}
+
+.thirdrow{
+  justify-content: center;
+}
+
+/* small gap between row wise flex elements */
+.col-gap {
+  margin: 2px;
+}
+
+/* contact information */
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: row;
+  align-content: space-evenly;
+}
+
+.contact div {
+  display: flex;
+  flex-direction: row;
+  align-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  height: 75px;
+}
+
+.contact img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.contact h3 {
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 25px;
+  vertical-align: center;
+  width: 100%;
+}
+
+#runbuddy{
+  width: 50%;
+  height: 100%;
+  
+}
