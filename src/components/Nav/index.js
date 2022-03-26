@@ -22,9 +22,7 @@ function Nav(){
     }
   ];
 
-
   return (
-    <header> 
       <nav>
         <ul className='flew-row'>
           {categories.map((category) => 
@@ -36,7 +34,6 @@ function Nav(){
           )}
         </ul> 
       </nav>
-    </header>
   );
 };
 
