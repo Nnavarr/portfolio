@@ -4,7 +4,7 @@ import pdf from '../../assets/docs/noe_resume.pdf'
 const Resume = () => {
 
   return(
-    <h2><a href={pdf}>Reume</a></h2>
+    <h2><a href={pdf}>Resume</a></h2>
   )
 }
 
