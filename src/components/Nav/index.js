@@ -31,10 +31,6 @@ function Nav(props){
                 </span>
               </li>
             ))}
-          {/* contact, will update state to true if it's clicked */}
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
-          </li>
         </ul> 
       </nav>
   );

@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import About from './components/About';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
   // establish categories for conditional rendering
@@ -19,6 +20,10 @@ function App() {
     {
       name: 'Resume',
       description: 'Link to my Resume'
+    },
+    {
+      name: 'Contact',
+      description: 'Contact form'
     }
   ]);
 
@@ -27,6 +32,19 @@ function App() {
 
   // set contactSelected (default = false)
   const [contactSelected, setContactSelected] = useState(false);
+
+  function renderSelection(currentCategory){
+    switch(currentCategory){
+      case 'Resume':
+        return <Resume></Resume>
+      case 'About Me':
+        return <About></About>
+      case 'Contact':
+        return <Contact></Contact>
+      default:
+        return <About></About>
+    }
+  }
 
   return (
     <div>
@@ -39,13 +57,7 @@ function App() {
       ></Header>
       <main>
         <Sidebar></Sidebar>
-        
-        {/* render contact form if selected, otherwise about */}
-        {!contactSelected ? (
-          <About></About>
-        ) : (
-          <Contact></Contact>
-        )}
+        {renderSelection(currentCategory.name)}
       </main>
     </div>
   );
