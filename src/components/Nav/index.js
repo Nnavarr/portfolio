@@ -12,11 +12,11 @@ function Nav(props){
 
   return (
       <nav>
-        <ul className='flew-row'>
+        <ul className='nav-bar'>
           {/* general categories */}
           {categories.map((category) => (
               <li
-                className={`mx-1 ${
+                className={`nav-item ${
                   currentCategory.name === category.name && !contactSelected && 'navActive'
                   }`}
                 key={category.name}
