@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.1759b69d.css",
+    "main.js": "/portfolio/static/js/main.b3372119.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/run-buddy.jpg": "/portfolio/static/media/run-buddy.000e1b5ff4f0b912c97f.jpg",
+    "static/media/inv-forecast.png": "/portfolio/static/media/inv-forecast.de550543ed2794912684.png",
+    "static/media/noe_resume.pdf": "/portfolio/static/media/noe_resume.3b587398c0cd6090909e.pdf",
+    "static/media/profile_pic.jpg": "/portfolio/static/media/profile_pic.d07f221d82f740c6345d.jpg",
+    "static/media/portfolio-preview.png": "/portfolio/static/media/portfolio-preview.6dc5f4edc99fb5d2ac2e.png",
+    "static/media/market-picture.jpg": "/portfolio/static/media/market-picture.cfaf0a064a0dcaf27ff7.jpg",
+    "static/media/stockwyse-screenshot.png": "/portfolio/static/media/stockwyse-screenshot.4deaab8f7828826abde1.png",
+    "static/media/stockwyse.png": "/portfolio/static/media/stockwyse.fb79936f0313b5c0c27c.png",
+    "static/media/insomnia_pic.png": "/portfolio/static/media/insomnia_pic.e885080383d7c26d0cb1.png",
+    "static/media/profile_front.png": "/portfolio/static/media/profile_front.3f0bbce3289121066e6a.png",
+    "static/media/hyperlink-lobby.png": "/portfolio/static/media/hyperlink-lobby.b2656a42518d2b8769ea.png",
+    "static/media/linkedin_logo.png": "/portfolio/static/media/linkedin_logo.452ace0cd88b2868918a.png",
+    "static/media/GitHub-Mark.png": "/portfolio/static/media/GitHub-Mark.a8d719e275063d6874be.png",
+    "static/media/email-icon.jpg": "/portfolio/static/media/email-icon.47b17c452c72637e25ee.jpg",
+    "static/media/phone.jpg": "/portfolio/static/media/phone.8e5493f27709890ad8db.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.1759b69d.css.map": "/portfolio/static/css/main.1759b69d.css.map",
+    "main.b3372119.js.map": "/portfolio/static/js/main.b3372119.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1759b69d.css",
+    "static/js/main.b3372119.js"
+  ]
+}
