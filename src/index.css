@@ -201,6 +201,9 @@ main {
   left: 16px;
   padding: 5px;
   position: absolute;
+  height: 50px;
+  text-align: center;
+
 }
 
 .thirdrow{
@@ -286,7 +289,6 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 5px;
-  border: 3px solid #a07;
 }
 
 .nav-bar {
@@ -345,3 +347,14 @@ footer {
 #aboutme-paragraph {
   padding: 10px;
 }
+
+#gh-image {
+  height: 50px;
+  /* margin-bottom: 400px; */
+  width: 50px;
+  margin-top: -10px;
+  margin-bottom: -30px;
+  margin-left: 30px;
+  height: 50px;
+}
+
