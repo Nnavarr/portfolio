@@ -3,19 +3,33 @@ import React, { useEffect } from 'react'
 // create nav function
 function Nav(props){
   const {
-    categories
+    categories = [],
+    currentCategory,
+    setCurrentCategory,
+    contactSelected,
+    setContactSelected
   } = props
 
   return (
       <nav>
         <ul className='flew-row'>
-          {categories.map((category) => 
-            <li className='mx-1' key={category.name}>
-              <span>
-                {category.name}
-              </span>
-            </li>
-          )}
+          {categories.map((category) => (
+              <li
+                className={`mx-1 ${
+                  currentCategory.name === category.name && !contactSelected && 'navActive'
+                  }`}
+                key={category.name}
+              >
+                <span
+                  onClick={() => {
+                    setCurrentCategory(category);
+                    setContactSelected(false);
+                  }}
+                >
+                  {category.name}
+                </span>
+              </li>
+            ))}
         </ul> 
       </nav>
   );

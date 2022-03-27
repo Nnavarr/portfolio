@@ -4,7 +4,11 @@ import Nav from '../Nav';
 const Header = (props) => {
 
   const {
-    categories
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+    contactSelected,
+    setContactSelected
   } = props
 
   return (
@@ -12,6 +16,10 @@ const Header = (props) => {
       <h1>Noé Navarro</h1>
       <Nav
         categories={categories}
+        setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
     </header>
   )
