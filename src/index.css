@@ -16,6 +16,7 @@ code {
   --green-color: #00FB11;
   --secondary-color: #D4DCD6;
   --header-color: black;
+  --footer-color: black;
 }
 
 /* General HTML elements */
@@ -79,6 +80,8 @@ main {
 /* home */
 .home {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--secondary-color);
   border-bottom: .5px solid black;
   border-left: .5px solid black;
@@ -91,25 +94,11 @@ main {
   border-radius: 50%;
   margin-top: 10px;
   margin-left: 10px;
-}
-
-.home .socials h2 {
-  text-align: center;
-  margin: 5px 5px;
-}
-
-/* social image container */
-.home .socials .social-images {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: center;
-  max-width: 100%;
 }
 
-.home .socials .social-images a {
-  height: 50px;
-  width: 50px;
+.home h2 {
+  justify-content: center;
 }
 
 /* socials image sizing */
@@ -234,4 +223,13 @@ main {
   width: 50%;
   height: 100%;
   
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* background: var(--footer-color); */
+  background: var(--header-color);
 }

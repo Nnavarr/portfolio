@@ -3,6 +3,10 @@ import React from "react";
 const About = () => {
   return(
     <section className='aboutme'>
+      <section className='home' id='aboutme'>
+        <img src={require('../../assets/images/profile_pic.jpg')} id='profile-pic' alt="Noe Navarro smiling and leaning against a wall"/>
+        <h2 id='title'>Noé Navarro | Software Developer</h2>
+      </section>
       <h2>About Me</h2>
       <p>
           Hello, I'm Noe! I graduated with a Bachelor's in Finance 2014 from the W.P. Carey School of Business. Since then, I've spent the majority of my career as a Financial Analyst at U-Haul. Through my time there, I discovered I enjoyed working with data and developing automated reports/processes much more than the finance. As a result, I decided to pursue a different career path where I'd get to do just that.  

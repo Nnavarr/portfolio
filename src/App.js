@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
 import About from './components/About';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 function App() {
   // establish categories for conditional rendering
@@ -56,9 +56,9 @@ function App() {
         setContactSelected={setContactSelected}
       ></Header>
       <main>
-        <Sidebar></Sidebar>
         {renderSelection(currentCategory.name)}
       </main>
+      <Footer></Footer>
     </div>
   );
 }
