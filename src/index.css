@@ -30,6 +30,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: right;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -37,6 +38,14 @@ header {
 
 header h1 {
   padding-left: 15px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  header {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 header nav ul {
@@ -44,21 +53,32 @@ header nav ul {
   color: var(--primary-color);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   list-style: none;
   padding-right: 15px;
   padding-top: 10px;
+  flex: 0 1 auto;
 }
 
 header nav ul li span {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  text-align: center;
   background: var(--secondary-color);
   border: 1px solid black;
   color: var(--header-color);
   font-size: 25px;
   font-weight: ligher;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 10px;
   text-decoration: none;
+  flex: 0 1 auto;
+}
+
+.nav-item {
+  flex: 1;
 }
 
 /* main contect flexbox container */
@@ -277,15 +297,6 @@ footer {
   height: 100%;
 }
 
-/* @media (max-width: 768px) {
-  .nav-bar {
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(2, 65%);
-  }
-} */
-
 .contact-main {
   display: flex;
   flex-direction: column;
@@ -325,4 +336,12 @@ footer {
 
 #formLabel {
   padding-right: 10px;
+}
+
+#aboutme-title {
+  padding: 10px;
+}
+
+#aboutme-paragraph {
+  padding: 10px;
 }
