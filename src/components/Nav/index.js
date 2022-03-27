@@ -13,6 +13,7 @@ function Nav(props){
   return (
       <nav>
         <ul className='flew-row'>
+          {/* general categories */}
           {categories.map((category) => (
               <li
                 className={`mx-1 ${
@@ -30,6 +31,10 @@ function Nav(props){
                 </span>
               </li>
             ))}
+          {/* contact, will update state to true if it's clicked */}
+          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+            <span onClick={() => setContactSelected(true)}>Contact</span>
+          </li>
         </ul> 
       </nav>
   );

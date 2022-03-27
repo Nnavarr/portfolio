@@ -17,10 +17,6 @@ function App() {
       description: '6 projects showcasing technical proficiency'
     },
     {
-      name: 'Contact',
-      description: 'Contact section with various methods for contcting me'
-    },
-    {
       name: 'Resume',
       description: 'Link to my Resume'
     }
