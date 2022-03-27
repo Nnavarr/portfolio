@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import About from './components/About';
+import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
@@ -35,10 +36,12 @@ function App() {
 
   function renderSelection(currentCategory){
     switch(currentCategory){
-      case 'Resume':
-        return <Resume></Resume>
       case 'About Me':
         return <About></About>
+      case 'Portfolio':
+        return <Portfolio></Portfolio>
+      case 'Resume':
+        return <Resume></Resume>
       case 'Contact':
         return <Contact></Contact>
       default:
@@ -47,18 +50,20 @@ function App() {
   }
 
   return (
-    <div>
-      <Header
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      ></Header>
-      <main>
-        {renderSelection(currentCategory.name)}
-      </main>
-      <Footer></Footer>
+    <div className='main-content'>
+      <div className='body'>
+        <Header
+          categories={categories}
+          setCurrentCategory={setCurrentCategory}
+          currentCategory={currentCategory}
+          contactSelected={contactSelected}
+          setContactSelected={setContactSelected}
+        ></Header>
+        <main>
+          {renderSelection(currentCategory.name)}
+        </main>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }
