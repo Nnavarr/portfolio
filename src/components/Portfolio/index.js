@@ -5,6 +5,13 @@ const Portfolio = () => {
 
   const projects = [
     {
+      name: 'Chorezy - Full Stack (MERN)', 
+      link: 'https://chorezy2.herokuapp.com/',
+      image: 'chorezy_app.png',
+      alt: 'chorezy app lobby',
+      repo: 'https://github.com/Nnavarr/Chorezy'
+    },
+    {
       name: 'Hyperlink - Full Stack (MySQL)', 
       link: 'https://hyperlink-app.herokuapp.com/',
       image: 'hyperlink-lobby.png',
