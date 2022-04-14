@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1759b69d.css",
-    "main.js": "/portfolio/static/js/main.b3372119.js",
+    "main.js": "/portfolio/static/js/main.6ca5ef2d.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/run-buddy.jpg": "/portfolio/static/media/run-buddy.000e1b5ff4f0b912c97f.jpg",
     "static/media/inv-forecast.png": "/portfolio/static/media/inv-forecast.de550543ed2794912684.png",
@@ -9,6 +9,7 @@
     "static/media/profile_pic.jpg": "/portfolio/static/media/profile_pic.d07f221d82f740c6345d.jpg",
     "static/media/portfolio-preview.png": "/portfolio/static/media/portfolio-preview.6dc5f4edc99fb5d2ac2e.png",
     "static/media/market-picture.jpg": "/portfolio/static/media/market-picture.cfaf0a064a0dcaf27ff7.jpg",
+    "static/media/chorezy_app.png": "/portfolio/static/media/chorezy_app.9af4ff8dc3629f2bda7c.png",
     "static/media/stockwyse-screenshot.png": "/portfolio/static/media/stockwyse-screenshot.4deaab8f7828826abde1.png",
     "static/media/stockwyse.png": "/portfolio/static/media/stockwyse.fb79936f0313b5c0c27c.png",
     "static/media/insomnia_pic.png": "/portfolio/static/media/insomnia_pic.e885080383d7c26d0cb1.png",
@@ -20,11 +21,11 @@
     "static/media/phone.jpg": "/portfolio/static/media/phone.8e5493f27709890ad8db.jpg",
     "index.html": "/portfolio/index.html",
     "main.1759b69d.css.map": "/portfolio/static/css/main.1759b69d.css.map",
-    "main.b3372119.js.map": "/portfolio/static/js/main.b3372119.js.map",
+    "main.6ca5ef2d.js.map": "/portfolio/static/js/main.6ca5ef2d.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1759b69d.css",
-    "static/js/main.b3372119.js"
+    "static/js/main.6ca5ef2d.js"
   ]
 }
