@@ -1,17 +1,20 @@
 import React from "react";
 import { saveAs } from 'file-saver';
+import myResume from '../../assets/docs/noe_navarro_resume.pdf';
 
 const Resume = () => {
   // download function
   const downloadPDF = () => {
-    const pdfPath = 'src/assets/docs/noe_navarro_resume.pdf'
-    const pdfUrl = new URL(pdfPath, window.location.origin).href;
-    saveAs(pdfUrl, 'noe_navarro_resume.pdf');
+    saveAs(myResume, 'noe_navarro_resume.pdf');
   }
 
   return(
     <section className='resume'>
-      <h2><a href={pdf}>Resume</a></h2>
+      <button
+        onClick={downloadPDF}
+      >
+        Resume
+      </button>
     </section>
   )
 }
