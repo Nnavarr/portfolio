@@ -1,7 +1,13 @@
 import React from "react";
-import pdf from '../../assets/docs/noe_resume.pdf'
+import { saveAs } from 'file-saver';
 
 const Resume = () => {
+  // download function
+  const downloadPDF = () => {
+    const pdfPath = 'src/assets/docs/noe_navarro_resume.pdf'
+    const pdfUrl = new URL(pdfPath, window.location.origin).href;
+    saveAs(pdfUrl, 'noe_navarro_resume.pdf');
+  }
 
   return(
     <section className='resume'>
