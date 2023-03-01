@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 function App() {
   // establish categories for conditional rendering
   const [categories] = useState([
-
     {
       name: 'About Me',
       description: 'Section that provides a summary of myself'
