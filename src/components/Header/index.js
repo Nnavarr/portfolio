@@ -13,7 +13,6 @@ const Header = (props) => {
 
   return (
     <header>
-      <h1>Noé Navarro</h1>
       <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}

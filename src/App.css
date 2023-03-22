@@ -11,6 +11,8 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+
+  
 }
 
 .App-header {
@@ -35,6 +37,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+header {
+  height: 42.55px;
 }
 
 /* Set the background color to black */

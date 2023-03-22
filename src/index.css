@@ -13,7 +13,7 @@ code {
 }
 
 :root {
-  --green-color: #00FB11;
+  --primary-color: #2DCE84;
   --secondary-color: #D4DCD6;
   --header-color: black;
   --footer-color: black;
@@ -29,16 +29,18 @@ header {
   background: black;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: right;
+  justify-content: center;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 9999;
 }
 
-header h1 {
-  padding-left: 15px;
+header nav {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: 326.34;
 }
 
 @media (max-width: 768px) {
@@ -56,9 +58,9 @@ header nav ul {
   flex-direction: row;
   justify-content: center;
   list-style: none;
-  padding-right: 15px;
-  padding-top: 10px;
   flex: 0 1 auto;
+  padding-inline-start: 0;
+  margin: 0px;
 }
 
 header nav ul li span {
@@ -66,15 +68,13 @@ header nav ul li span {
   flex-direction: column;
   width: 120px;
   text-align: center;
-  background: var(--secondary-color);
   border: 1px solid black;
-  color: var(--header-color);
-  font-size: 25px;
+  color: var(--primary-color);
+  font-size: 20px;
   font-weight: ligher;
-  padding: 10px 10px;
-  margin: 10px;
   text-decoration: none;
   flex: 0 1 auto;
+  height: 15.60px;
 }
 
 .nav-item {
@@ -296,7 +296,7 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100%;
+  height: 15.60px;
 }
 
 .contact-main {
