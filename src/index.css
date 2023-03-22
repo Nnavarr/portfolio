@@ -256,11 +256,19 @@ main {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  transition: bottom 0.3s ease-in-out;
   flex-shrink:0;
   width: 100%;
   text-align: center;
-  /* background: var(--footer-color); */
   background: var(--header-color);
+}
+
+@media screen and (min-height: 900px) {
+  footer {
+    bottom: 0;
+  }
 }
 
 .container {
