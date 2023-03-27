@@ -4,7 +4,17 @@ const About = () => {
   return(
     <section className='aboutme'>
       <section className='home' id='aboutme'>
-        <img src={require('../../assets/images/profile_pic.jpg')} id='profile-pic' alt="Noe Navarro smiling and leaning against a wall"/>
+        <div>
+          {/* python logo */}
+          <img src={require('../../assets/images/python_logo.jpg')} id='python-logo' alt='python logo'/>
+
+          {/* AI profile image */}
+          <img src={require('../../assets/images/ai_profile_noe.jpeg')} id='profile-pic' alt="Noe Navarro as depicted by an AI art style as a profile view"/>
+
+          {/* Javascript logo */}
+          <img src={require('../../assets/images/js_logo.jpg')} id='javascript-logo' alt='Javascript logo'/>
+        </div>
+
         <h1>Noé Navarro</h1>
         <h2 id='title' className='nameTitle'> Full Stack Software Developer</h2>
       </section>
