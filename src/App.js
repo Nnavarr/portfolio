@@ -12,7 +12,8 @@ function App() {
   const [categories] = useState([
     {
       name: 'About Me',
-      description: 'Section that provides a summary of myself'
+      description: 'Section that provides a summary of myself',
+      image: 'src/assets/images/code_background.jpg'
     },
     {
       name: 'Portfolio',
@@ -47,6 +48,15 @@ function App() {
       default:
         return <About></About>
     }
+  }
+
+  const findImage = (categories) => {
+    // filter categories array for currentCategory
+    const categoryObj = categories.find(category => category.name == currentCategory);
+
+    // extract image property
+    const imagePath = categoryObj.image;
+    return imagePath;
   }
 
   return (
