@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
+import codeBackground from '../src/assets/images/code_background.jpg';
 
 function App() {
   // establish categories for conditional rendering
@@ -69,7 +70,14 @@ function App() {
           contactSelected={contactSelected}
           setContactSelected={setContactSelected}
         ></Header>
-        <main>
+        <main
+          style={{ 
+            backgroundImage: `url(${codeBackground})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center -45px'
+          }}
+        >
           {renderSelection(currentCategory.name)}
         </main>
         <Footer></Footer>
