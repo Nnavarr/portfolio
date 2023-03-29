@@ -1,5 +1,13 @@
 import React from "react";
 
+// styles
+const titleStyle = {
+  border: '1px solid black',
+  padding: '10px',
+  background: '#009e66',
+  marginTop: '10px'
+}
+
 const About = () => {
   return(
     <section className='aboutme'>
@@ -15,18 +23,25 @@ const About = () => {
           <img src={require('../../assets/images/js_logo.jpg')} id='javascript-logo' alt='Javascript logo'/>
         </div>
 
-        <h1>Noé Navarro</h1>
-        <h2 id='title' className='nameTitle'> Full Stack Software Developer</h2>
+        {/* Welcome h1s */}
+        <div
+          style={{ display: 'flex'}}
+        >
+          <h1 style={{ color: 'white' }}>Hello! I'm </h1>
+          <h1>Noé Navarro</h1>
+        </div>
+
+        {/* full stack dev banner */}
+        <div>
+          <h2 style={titleStyle}> Full Stack Developer</h2>
+        </div>
       </section>
       <h2 id='aboutme-title'>About Me</h2>
       <p id='aboutme-paragraph'>
-        Hi there, I'm Noe Navarro! I'm a full stack developer with a background in corporate finance. I'm passionate about leveraging technology to solve problems and create efficient and effective solutions.
-
+        I’m a full stack developer with a background in corporate finance. I’m passionate about leveraging technology to solve problems and create efficient and effective solutions.
         <br></br>
         <br></br>
-
-        After working in finance for several years, I decided to pursue my interest in coding and web development. I've since completed a full stack web development program and have gained experience working on various projects, ranging from data engineering and back-end development to full-stack applications using the MERN/GRAND stack. In addition to these JS stacks, I also have expertise in Python, SQL, and Azure Databricks. I've worked on projects involving data analysis, data modeling, and ETL (extract, transform, load) processes.
-
+        After working in finance for several years, I decided to pursue my interest in coding and web development. I’ve since completed a full stack web development program and have gained experience working on various projects, ranging from data engineering and back-end development to full-stack applications using the MERN/GRAND stack. In addition to these JS stacks, I also have expertise in Python, SQL, and Azure. I’ve worked on projects involving data analysis, data modeling, and ETL (extract, transform, load) processes.
         <br></br>
         <br></br>
 

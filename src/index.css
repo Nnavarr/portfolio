@@ -23,6 +23,9 @@ code {
 /* General HTML elements */
 h1 {
   color: var(--green-color);
+  font-size: 35px;
+  margin-right: 5px;
+  margin-bottom: 0px;
 }
 
 /* header & navigation bar */
@@ -342,10 +345,16 @@ footer {
 
 #aboutme-title {
   padding: 10px;
+  text-align: center;
 }
 
 #aboutme-paragraph {
+  display: flex;
   padding: 10px;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  margin: auto;
 }
 
 #gh-image {
