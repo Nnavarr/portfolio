@@ -73,7 +73,7 @@ nav ul li span {
 
 .nav-item span {
   flex: 1;
-  color: var(--green-color);
+  color: #2DCE84;
 }
 
 /* main contect flexbox container */
@@ -224,10 +224,16 @@ main {
 }
 
 footer {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: 1.15rem;
   flex-shrink:0;
+  font-size: 0.67rem;
+  justify-content: center;
+  position: absolute;
   width: 100%;
   text-align: center;
-  /* background: var(--footer-color); */
   background: var(--header-color);
 }
 
@@ -316,7 +322,9 @@ footer {
 
 #aboutme-paragraph {
   display: flex;
-  padding: 10px;
+  font-size: 0.78rem;
+  height: 21.79rem;
+  padding: 0.39rem;
   flex-direction: column;
   text-align: center;
   width: 60%;
@@ -362,6 +370,7 @@ footer {
 
 #myname {
   margin-left: 0.39rem;
+  color: #2DCE84;
 }
 
 #title-container {
@@ -375,9 +384,13 @@ footer {
 #title {
   border: 1px solid black;
   padding: 0.39rem;
-  background: #009e66;
+  background: #2DCE84;
   margin: 0;
   font-size: 0.79rem;
+}
+
+#footer-message {
+  color:#2DCE84;
 }
 
 /* General HTML elements */
