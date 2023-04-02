@@ -1,15 +1,5 @@
 import React from "react";
 
-// styles
-const titleStyle = {
-  border: '1px solid black',
-  padding: '10px',
-  background: '#009e66',
-  marginTop: '10px',
-  marginBottom: '10px',
-  height: '30px'
-}
-
 const About = () => {
   return(
     <section className='aboutme'>
@@ -40,20 +30,13 @@ const About = () => {
           <div
             id='welcome-container'
           >
-            <h1 style={{ 
-              color: 'white', 
-              marginTop: '10px' 
-            }}>Hello! I'm </h1>
-            <h1
-              style={{
-                marginTop: '10px'
-              }}
-            >Noé Navarro</h1>
+            <h1 style={{ color: 'white', margin: '0'}}>Hello! I'm </h1>
+            <h1 id='myname' style={{ marginTop: '0' }}>Noé Navarro</h1>
           </div>
           
           {/* full stack dev banner */}
-          <div>
-            <h2 style={titleStyle}> Full Stack Developer</h2>
+          <div id='title-container'>
+            <h2 id='title'> Full Stack Developer</h2>
           </div>
         </div>
         <p id='aboutme-paragraph'>

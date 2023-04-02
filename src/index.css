@@ -357,6 +357,27 @@ footer {
   width: 16rem;
   display: flex;
   justify-content: center;
+  margin-top: 0.39rem;
+}
+
+#myname {
+  margin-left: 0.39rem;
+}
+
+#title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.39rem;
+  margin-bottom: 0.39rem;
+}
+
+#title {
+  border: 1px solid black;
+  padding: 0.39rem;
+  background: #009e66;
+  margin: 0;
+  font-size: 0.79rem;
 }
 
 /* General HTML elements */
