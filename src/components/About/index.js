@@ -34,17 +34,11 @@ const About = () => {
         }}
       >
         <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginTop: '10px'
-          }}
+          id='welcome-banners'
         >
           {/* Welcome h1s */}
           <div
-            style={{ display: 'flex'}}
+            id='welcome-container'
           >
             <h1 style={{ 
               color: 'white', 

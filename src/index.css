@@ -20,13 +20,6 @@ code {
   --footer-color: black;
 }
 
-/* General HTML elements */
-h1 {
-  color: var(--green-color);
-  font-size: 35px;
-  margin-right: 5px;
-  margin-bottom: 0px;
-}
 
 /* header & navigation bar */
 header {
@@ -108,8 +101,8 @@ main {
 }
 
 .home img {
-  height: 250px;
-  width: 250px;
+  height: 10.079rem;
+  width: 10.079rem;
   border-radius: 50%;
   margin-top: 10px;
   justify-content: center;
@@ -342,11 +335,34 @@ footer {
 }
 
 #python-logo {
-  height: 80px;
-  width: 80px;
+  height: 3.1745rem;
+  width: 3.1745rem;
 }
 
 #javascript-logo {
-  height: 80px;
-  width: 80px;
+  height: 3.1745rem;
+  width: 3.1745rem;
+}
+
+#welcome-banners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: .40rem;
+}
+
+#welcome-container {
+  height: 1.67rem;
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* General HTML elements */
+h1 {
+  color: var(--green-color);
+  font-size: 1.39rem;
+  margin-right: 5px;
+  margin-bottom: 0px;
 }
