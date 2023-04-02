@@ -5,7 +5,9 @@ const titleStyle = {
   border: '1px solid black',
   padding: '10px',
   background: '#009e66',
-  marginTop: '10px'
+  marginTop: '10px',
+  marginBottom: '10px',
+  height: '30px'
 }
 
 const About = () => {
@@ -28,6 +30,7 @@ const About = () => {
         style={{
           // transparent black background
           background: 'rgba(0, 0, 0, 0.75)',
+          border: 'none'
         }}
       >
         <div
@@ -35,15 +38,23 @@ const About = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            marginTop: '10px'
           }}
         >
           {/* Welcome h1s */}
           <div
             style={{ display: 'flex'}}
           >
-            <h1 style={{ color: 'white' }}>Hello! I'm </h1>
-            <h1>Noé Navarro</h1>
+            <h1 style={{ 
+              color: 'white', 
+              marginTop: '10px' 
+            }}>Hello! I'm </h1>
+            <h1
+              style={{
+                marginTop: '10px'
+              }}
+            >Noé Navarro</h1>
           </div>
           
           {/* full stack dev banner */}
@@ -51,7 +62,6 @@ const About = () => {
             <h2 style={titleStyle}> Full Stack Developer</h2>
           </div>
         </div>
-        <h2 id='aboutme-title'>About Me</h2>
         <p id='aboutme-paragraph'>
           I’m a full stack developer with a background in corporate finance. I’m passionate about leveraging technology to solve problems and create efficient and effective solutions.
           <br></br>
