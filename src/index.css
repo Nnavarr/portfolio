@@ -36,7 +36,7 @@ header {
   justify-content: space-between;
   align-items: right;
   z-index: 9999;
-  height: 60px;
+  height: 2.38rem;
   width: 100%;
   justify-content: center;
   position: relative;
@@ -69,8 +69,8 @@ nav ul li span {
   display: flex;
   flex-direction: column;
   width: 100px;
-  text-align: center;
-  font-size: 20px;
+  height: .9525rem;
+  text-align: center; 
   padding: 10px 10px;
 }
 
@@ -81,9 +81,7 @@ nav ul li span {
 .nav-item span {
   flex: 1;
   color: var(--green-color);
-  font-size: 20px;
 }
-
 
 /* main contect flexbox container */
 main {
@@ -93,13 +91,6 @@ main {
   justify-content: center;
   height: 100%;
   background-color: var(--secondary-color);
-}
-
-/* main content */
-.main-content {
-  display:grid;
-  grid-template-columns: repeat(1, 100% [col-start]);
-  padding: 10px;
 }
 
 .content {
@@ -126,23 +117,6 @@ main {
 
 .home h2 {
   justify-content: center;
-}
-
-/* socials image sizing */
-#GitHub {
-  height: 50px;
-  margin: 0;
-  text-align: center;
-  width: 50px;
-}
-
-#LinkedIn {
-  height: 40px;
-  margin-top:5px;
-  margin-left:5px;
-  text-align: center;
-  width: 40px;
-  
 }
 
 /* about me */
