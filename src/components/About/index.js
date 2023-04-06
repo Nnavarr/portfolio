@@ -17,11 +17,7 @@ const About = () => {
 
       </section>
       <section
-        style={{
-          // transparent black background
-          background: 'rgba(0, 0, 0, 0.75)',
-          border: 'none'
-        }}
+        id='about-container'
       >
         <div
           id='welcome-banners'

@@ -64,8 +64,7 @@ function App() {
   }
 
   return (
-    <div>
-      <div className='body'>
+      <div className='App'>
         <Header
           categories={categories}
           setCurrentCategory={setCurrentCategory}
@@ -81,11 +80,11 @@ function App() {
             backgroundPosition: 'center -45px'
           }}
         >
+          {/* Render selected content */}
           {renderSelection(currentCategory.name)}
         </main>
         <Footer></Footer>
       </div>
-    </div>
   );
 }
 
