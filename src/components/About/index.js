@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return(
     <section className='aboutme'>
-      <section className='home' id='aboutme'>
+      <section className='home'>
         <div>
           {/* python logo */}
           <img src={require('../../assets/images/python_logo.jpg')} id='python-logo' alt='python logo'/>
