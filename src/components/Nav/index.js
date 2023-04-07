@@ -6,8 +6,6 @@ function Nav(props){
     categories = [],
     currentCategory,
     setCurrentCategory,
-    contactSelected,
-    setContactSelected
   } = props
 
   return (
@@ -17,7 +15,7 @@ function Nav(props){
           {categories.map((category) => (
               <li
                 className={`nav-item ${
-                  currentCategory.name === category.name && !contactSelected && 'navActive'
+                  currentCategory.name === category.name && 'navActive'
                   }`}
                 key={category.name}
               >
