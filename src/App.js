@@ -37,12 +37,14 @@ function App() {
   // photo object
   const photoObject = {
     'About Me': codeBackground,
-    'Portfolio': rayBackground
+    'Portfolio': rayBackground,
+    'Resume': rayBackground, 
+    'Contact': rayBackground
   }
 
   // set category state 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [backgrounImg, setBackgroundImg] = useState(photoObject['About Me'])
+  const [backgrounImg, setBackgroundImg] = useState(photoObject[currentCategory.name])
 
   function renderSelection(currentCategory){
     switch(currentCategory){
@@ -59,14 +61,13 @@ function App() {
     }
   }
 
-  // const handleSelectChange
-
   return (
       <div className='App'>
         <Header
           categories={categories}
           setCurrentCategory={setCurrentCategory}
           currentCategory={currentCategory}
+          setBackgroundImg={setBackgroundImg}
         ></Header>
         <main
           style={{ 
