@@ -66,6 +66,13 @@ header nav ul {
   position: relative;
 }
 
+h1 {
+  color: var(--green-color);
+  font-size: 1.39rem;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
 nav ul li span {
   display: flex;
   flex-direction: column;
@@ -75,6 +82,13 @@ nav ul li span {
   padding: 10px 10px;
 }
 
+/* main contect flexbox container */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .nav-item span:hover {
   color: var(--green-hover);
 }
@@ -82,12 +96,6 @@ nav ul li span {
 .nav-item span {
   flex: 1;
   color: #2DCE84;
-}
-
-/* main contect flexbox container */
-main {
-  flex-grow: 1;
-  display: flex;
 }
 
 /* home */
@@ -118,104 +126,6 @@ main {
   flex-direction: column;
 }
 
-/* projects: container */
-.projects {
-  display: flex;
-  flex-direction: column;
-}
-
-/* main project container */
-.project-main {
-  justify-content: center;
-}
-
-/* second row of projects */
-.project-second {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-/* project banners - main */
-.banner-main {
-  position: relative;
-  text-align: left;
-}
-
-.banner-main img {
-  height: auto;
-  width: 100%;
-}
-
-/* project banners - secondary */
-.banner-secondary {
-  align-content: space-evenly;
-  text-align: left;
-  position: relative;
-  height: 100%;
-}
-
-.banner-secondary img {
-  flex: 1;
-  width: 100%;
-  height: 100%;
-}
-
-/* project banners - primary */
-.banner-text {
-  background-color: black;
-  bottom: 9px;
-  color: var(--green-color);
-  left: 16px;
-  padding: 5px;
-  position: absolute;
-  height: 50px;
-  text-align: center;
-
-}
-
-.thirdrow{
-  justify-content: center;
-}
-
-/* small gap between row wise flex elements */
-.col-gap {
-  margin: 2px;
-}
-
-/* contact information */
-.contact {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-icons {
-  display: flex;
-  flex-direction: row;
-  align-content: space-evenly;
-}
-
-.contact div {
-  display: flex;
-  flex-direction: row;
-  align-content: space-evenly;
-  text-align: center;
-  width: 100%;
-  height: 75px;
-}
-
-.contact img {
-  max-width: 100%;
-  height: 100%;
-}
-
-.contact h3 {
-  text-align: left;
-  margin-left: 10px;
-  margin-top: 25px;
-  vertical-align: center;
-  width: 100%;
-}
 
 footer {
   align-items: center;
@@ -234,11 +144,11 @@ footer {
 
 .container {
   display: grid;
-  justify-items: center;
   justify-content: center;
   grid-template-columns: repeat(2, 50% [col-start]);
   column-gap: 7px;
   row-gap: 7px; 
+  width: 80%;
 }
 
 /* change project grid to vertical line when the screen shrinks below 768px */
@@ -391,12 +301,4 @@ footer {
 
 #footer-message {
   color:#2DCE84;
-}
-
-/* General HTML elements */
-h1 {
-  color: var(--green-color);
-  font-size: 1.39rem;
-  margin-right: 5px;
-  margin-bottom: 0px;
 }

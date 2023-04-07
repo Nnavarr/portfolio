@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 // create nav function
 function Nav(props){
@@ -24,7 +24,6 @@ function Nav(props){
                 <span
                   onClick={() => {
                     setCurrentCategory(category);
-                    setContactSelected(false);
                   }}
                 >
                   {category.name}

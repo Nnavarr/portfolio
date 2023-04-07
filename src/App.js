@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 import codeBackground from '../src/assets/images/code_background.jpg';
+import rayBackground from '../src/assets/images/ray_background.jpg';
 
 function App() {
   console.log(`This is the device height ${window.innerHeight}`);
@@ -33,11 +34,15 @@ function App() {
     }
   ]);
 
+  // photo object
+  const photoObject = {
+    'About Me': codeBackground,
+    'Portfolio': rayBackground
+  }
+
   // set category state 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
-  // set contactSelected (default = false)
-  const [contactSelected, setContactSelected] = useState(false);
+  const [backgrounImg, setBackgroundImg] = useState(photoObject['About Me'])
 
   function renderSelection(currentCategory){
     switch(currentCategory){
@@ -54,14 +59,7 @@ function App() {
     }
   }
 
-  const findImage = (categories) => {
-    // filter categories array for currentCategory
-    const categoryObj = categories.find(category => category.name == currentCategory);
-
-    // extract image property
-    const imagePath = categoryObj.image;
-    return imagePath;
-  }
+  // const handleSelectChange
 
   return (
       <div className='App'>
@@ -69,12 +67,10 @@ function App() {
           categories={categories}
           setCurrentCategory={setCurrentCategory}
           currentCategory={currentCategory}
-          contactSelected={contactSelected}
-          setContactSelected={setContactSelected}
         ></Header>
         <main
           style={{ 
-            backgroundImage: `url(${codeBackground})`,
+            backgroundImage: `url(${backgrounImg})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center -45px'

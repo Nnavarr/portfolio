@@ -7,8 +7,6 @@ const Header = (props) => {
     categories = [],
     setCurrentCategory,
     currentCategory,
-    contactSelected,
-    setContactSelected
   } = props
 
   return (
@@ -17,8 +15,6 @@ const Header = (props) => {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
       ></Nav>
     </header>
   )
