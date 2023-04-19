@@ -2,7 +2,7 @@ import React from "react";
 import Nav from '../Nav';
 
 const Header = (props) => {
-
+  
   const {
     categories = [],
     setCurrentCategory,

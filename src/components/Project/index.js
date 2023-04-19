@@ -5,20 +5,30 @@ const Project = (props) => {
 
   return (
     <div className='container'>
-      {/* title */}
-      <div>
-        <h2>Checkout my Projects</h2>
+      <div id='portfolio-container'>
+        <h1 
+          style={{ color: 'white' }}
+        >
+          Checkout my
+        </h1>
+        <h1
+          id='project-title-projects'
+        >
+          Projects
+        </h1>
       </div>
-      {projectArray.map((proj) => (
-        <section>
-          <div>
-            <div class='project-title'>
-              {proj.name}
-              <a href={proj.repo}><img src={require(`../../assets/images/GitHub-Mark.png`)} id='gh-image' alt={proj.alt}></img></a>  
-            </div>
-          </div>
-        </section>
-      ))}
+      <div className='project-container'>
+        {projectArray.map((proj) => (
+          <section className='project'>
+              <div className='project-title'>
+                {proj.name}
+              </div>
+              <p className='description-text'>
+                {proj.description}
+              </p>
+          </section>
+        ))}
+      </div>
     </div>
   )
 }

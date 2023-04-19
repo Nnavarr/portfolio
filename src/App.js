@@ -10,8 +10,6 @@ import codeBackground from '../src/assets/images/code_background.jpg';
 import rayBackground from '../src/assets/images/ray_background.jpg';
 
 function App() {
-  console.log(`This is the device height ${window.innerHeight}`);
-  console.log(`This is the device widght ${window.innerWidth}`);
 
   // establish categories for conditional rendering
   const [categories] = useState([

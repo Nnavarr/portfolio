@@ -111,6 +111,7 @@ main {
   height: 10.079rem;
   width: 10.079rem;
   border-radius: 50%;
+
   margin-top: 10px;
   justify-content: center;
 }
@@ -142,18 +143,22 @@ footer {
   bottom: 0;
 }
 
-.container {
+.project-container {
   display: grid;
+  justify-items: center;
   justify-content: center;
-  grid-template-columns: repeat(2, 50% [col-start]);
+  grid-template-columns: repeat(2, 75%);
   column-gap: 7px;
+  position: relative;
+  margin-top: 50px;
   row-gap: 7px; 
-  width: 80%;
+  height: 9.17rem;
+  width: 100%;
 }
 
 /* change project grid to vertical line when the screen shrinks below 768px */
 @media (max-width: 768px) {
-  .container {
+  .project-container {
     display: grid;
     justify-items: center;
     justify-content: center;
@@ -194,6 +199,12 @@ footer {
   padding-top: 40px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .message-label {
   padding-bottom: 10px;
 }
@@ -209,6 +220,13 @@ footer {
 
 .contact-message textarea {
   height: 200px;
+}
+
+.description-text {
+  color: white;
+  size: 16px;
+  margin: 0;
+  height: 100%;
 }
 
 #formName {
@@ -272,6 +290,21 @@ footer {
   margin-top: 0.39rem;
 }
 
+#portfolio-container {
+  width: 16rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.39rem;
+  background-color: #1C1C1C;
+}
+
+#portfolio-container h1 {
+  margin-top: 0;
+}
+
+
 #myname {
   margin-left: 0.39rem;
   color: #2DCE84;
@@ -301,4 +334,25 @@ footer {
 
 #footer-message {
   color:#2DCE84;
+}
+
+.project-title {
+  color: #2DCE84;
+  size: 30px;
+  margin-bottom: 10px;
+} 
+
+#project-title-projects {
+  margin-left: 0.39rem;
+  color: #2DCE84;
+}
+
+.project {
+  height: 9.17rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #1C1C1C;
+  border-radius: 25px;
+  padding: 10px 15px 15px 15px;
 }
