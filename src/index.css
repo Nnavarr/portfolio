@@ -356,3 +356,17 @@ footer {
   border-radius: 25px;
   padding: 10px 15px 15px 15px;
 }
+
+.github-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  position: relative;
+  right: 0;
+}
+
+.github-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+}

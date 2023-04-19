@@ -26,6 +26,9 @@ const Project = (props) => {
               <p className='description-text'>
                 {proj.description}
               </p>
+              <div className='github-container'>
+                <img src={require('../../assets/images/githubLogo.jpg')} className='github-img'/>
+              </div>
           </section>
         ))}
       </div>
