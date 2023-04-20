@@ -72,7 +72,8 @@ function App() {
             backgroundImage: `url(${backgrounImg})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center -45px'
+            backgroundPosition: 'center -45px',
+            backgroundAttachment: 'fixed'
           }}
         >
           {/* Render selected content */}

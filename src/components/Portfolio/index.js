@@ -29,7 +29,7 @@ const Portfolio = () => {
       description: 'A social media API built using MongoDB, Mongoose, Express, and Node.js. It includes two main schemas, User and Thought, and allows for CRUD operations on both.'
     },
     {
-      name: 'Rub-Buddy - Website',
+      name: 'Run-Buddy - Website',
       link: 'https://nnavarr.github.io/run-buddy/',
       image: 'run-buddy.jpg',
       alt: 'run-buddy website',
