@@ -29,6 +29,12 @@ code {
   --footer-color: black;
 }
 
+#root {
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 /* header & navigation bar */
 header {
   background: black;
@@ -87,6 +93,8 @@ main {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: scroll;
 }
 
 .nav-item span:hover {
