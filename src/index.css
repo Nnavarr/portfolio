@@ -155,8 +155,8 @@ footer {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-columns: repeat(2, 75%);
-  column-gap: 7px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
   position: relative;
   margin-top: 50px;
   row-gap: 7px; 
@@ -356,7 +356,7 @@ footer {
 }
 
 /* project card container */
-.project {
+.project{
   height: 10rem;
   width: 25rem;
   display: flex;

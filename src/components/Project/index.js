@@ -19,18 +19,19 @@ const Project = (props) => {
       </div>
       <div className='project-container'>
         {projectArray.map((proj) => (
-          <section className='project'>
-              <div className='project-title'>
-                {proj.name}
-              </div>
-              <p className='description-text'>
-                {proj.description}
-              </p>
-              <div className='github-container'>
-                <img src={require('../../assets/images/githubLogo.jpg')} className='github-img'/>
-              </div>
-          </section>
-        ))}
+            <section className='project'>
+                <div className='project-title'>
+                  {proj.name}
+                </div>
+                <p className='description-text'>
+                  {proj.description}
+                </p>
+                <div className='github-container'>
+                  <img src={require('../../assets/images/githubLogo.jpg')} className='github-img'/>
+                </div>
+            </section>
+          ))
+        }
       </div>
     </div>
   )
