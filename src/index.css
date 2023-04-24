@@ -135,6 +135,10 @@ main {
   flex-direction: column;
 }
 
+.icon-img {
+  size: 24px;
+  margin-left: 15px;
+}
 
 footer {
   align-items: center;
@@ -348,6 +352,8 @@ footer {
   color: #2DCE84;
   size: 30px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
 } 
 
 #project-title-projects {

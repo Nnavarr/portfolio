@@ -21,7 +21,11 @@ const Project = (props) => {
         {projectArray.map((proj) => (
             <section className='project'>
                 <div className='project-title'>
-                  {proj.name}
+                  <h3>{proj.name}</h3>
+                  <img 
+                    src={proj.icon}
+                    className='icon-img'
+                  />
                 </div>
                 <p className='description-text'>
                   {proj.description}
