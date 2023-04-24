@@ -7,6 +7,7 @@ const Header = (props) => {
     categories = [],
     setCurrentCategory,
     currentCategory,
+    handleCategoryChange
   } = props
 
   return (
@@ -14,6 +15,7 @@ const Header = (props) => {
       <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}
+        handleCategoryChange={handleCategoryChange}
         currentCategory={currentCategory}
       ></Nav>
     </header>

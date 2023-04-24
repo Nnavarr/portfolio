@@ -164,7 +164,6 @@ footer {
   position: relative;
   margin-top: 50px;
   row-gap: 25px; 
-  height: 9.17rem;
   width: 100%;
 }
 
@@ -351,7 +350,6 @@ footer {
 .project-title {
   color: #2DCE84;
   size: 30px;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
 } 
@@ -363,7 +361,7 @@ footer {
 
 /* project card container */
 .project {
-  height: 10rem;
+  height: 13rem;
   width: 25rem;
   display: flex;
   flex-direction: column;

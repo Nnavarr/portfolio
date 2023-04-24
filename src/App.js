@@ -16,7 +16,6 @@ function App() {
     {
       name: 'About Me',
       description: 'Section that provides a summary of myself',
-      image: 'src/assets/images/code_background.jpg'
     },
     {
       name: 'Portfolio',
@@ -32,17 +31,9 @@ function App() {
     }
   ]);
 
-  // photo object
-  const photoObject = {
-    'About Me': codeBackground,
-    'Portfolio': rayBackground,
-    'Resume': rayBackground, 
-    'Contact': rayBackground
-  }
-
   // set category state 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [backgrounImg, setBackgroundImg] = useState(photoObject[currentCategory.name])
+  const [currentCategory, setCurrentCategory] = useState('About Me');
+  const [backgroundImg, setBackgroundImg] = useState(codeBackground)
 
   function renderSelection(currentCategory){
     switch(currentCategory){
@@ -59,17 +50,34 @@ function App() {
     }
   }
 
+  const backgroundObject = {
+    'About Me': codeBackground,
+    'Portfolio': rayBackground,
+    'Resume': rayBackground,
+    'Contact': rayBackground
+  }
+
+  // category change
+  const handleCategoryChange = (category) => {
+    // update category value
+    setCurrentCategory(category)
+    console.log(currentCategory)
+
+    // update background image
+    setBackgroundImg(backgroundObject[category])
+  }
+
   return (
       <div className='App'>
         <Header
           categories={categories}
           setCurrentCategory={setCurrentCategory}
+          handleCategoryChange={handleCategoryChange}
           currentCategory={currentCategory}
-          setBackgroundImg={setBackgroundImg}
         ></Header>
         <main
           style={{ 
-            backgroundImage: `url(${backgrounImg})`,
+            backgroundImage: `url(${backgroundImg})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center -45px',
@@ -77,7 +85,7 @@ function App() {
           }}
         >
           {/* Render selected content */}
-          {renderSelection(currentCategory.name)}
+          {renderSelection(currentCategory)}
         </main>
         <Footer></Footer>
       </div>

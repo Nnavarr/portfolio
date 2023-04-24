@@ -6,6 +6,7 @@ function Nav(props){
     categories = [],
     currentCategory,
     setCurrentCategory,
+    handleCategoryChange
   } = props
 
   return (
@@ -21,7 +22,8 @@ function Nav(props){
               >
                 <span
                   onClick={() => {
-                    setCurrentCategory(category);
+                    console.log(category.name)
+                    handleCategoryChange(category.name);
                   }}
                 >
                   {category.name}
