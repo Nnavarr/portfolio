@@ -61,7 +61,6 @@ function App() {
   const handleCategoryChange = (category) => {
     // update category value
     setCurrentCategory(category)
-    console.log(currentCategory)
 
     // update background image
     setBackgroundImg(backgroundObject[category])

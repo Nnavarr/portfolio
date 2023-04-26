@@ -22,7 +22,6 @@ function Nav(props){
               >
                 <span
                   onClick={() => {
-                    console.log(category.name)
                     handleCategoryChange(category.name);
                   }}
                 >

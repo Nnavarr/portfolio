@@ -57,7 +57,6 @@ header {
 }
 
 header nav {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -163,7 +162,7 @@ footer {
   column-gap: 25px;
   position: relative;
   margin-top: 50px;
-  row-gap: 25px; 
+  row-gap: 10px; 
   width: 100%;
 }
 
@@ -368,6 +367,7 @@ footer {
   background-color: #1C1C1C;
   border-radius: 25px;
   padding: 10px 15px 15px 15px;
+  margin-bottom: 15px;
 }
 
 .github-container {
