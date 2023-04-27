@@ -166,6 +166,21 @@ footer {
   width: 100%;
 }
 
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  column-gap: 300px;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+  }
+}
+
 /* change project grid to vertical line when the screen shrinks below 768px */
 @media (max-width: 768px) {
   .project-container {

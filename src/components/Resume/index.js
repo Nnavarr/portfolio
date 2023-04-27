@@ -68,7 +68,14 @@ const Resume = () => {
 
 
   return(
-    <div>
+    <div className='container'>
+      {/*  title */}
+      <div id='portfolio-container'>
+        <h1 style={{'color': 'white'}}>My</h1>
+        <h1 className='project-title-projects'>Resume</h1>
+      </div>
+
+      {/* download resume button */}
       <section className='resume'>
         <button
           onClick={downloadPDF}
@@ -77,18 +84,34 @@ const Resume = () => {
         </button>
       </section>
 
-      {/* education */}
-      {educationContainer.map((item) => (
-        <section className='project'>
-          <div className='project-title'>
-            <h3>{item.title}</h3>
-          </div>
-          <p className='description-text'>{item.description}</p>
-        </section>
-      ))
-      }
+      {/* column container */}
+      <div className='resume-container'>
+        <div>
+          {/* education */}
+          {educationContainer.map(item => (
+            <section className='project'>
+              <div className='project-title'>
+                <h3>{item.title}</h3>
+              </div>
+              <p className='description-text'>{item.description}</p>
+            </section>
+            ))
+          }
+        </div>
 
-      {/* work experience */}
+        <div>
+          {/* work experience */}
+          {workContainer.map(item => (
+            <section className='project'>
+              <div className='project-title'>
+                <h3>{item.title}</h3>
+              </div>
+              <p className='description-text'>{item.description}</p>
+            </section>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }
