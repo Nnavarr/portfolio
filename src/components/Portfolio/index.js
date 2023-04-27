@@ -54,6 +54,7 @@ const Portfolio = () => {
       image: 'stockwyse-screenshot.png',
       alt: 'Stowyse app snapshot',
       repo: 'https://github.com/Nnavarr/stockwyse',
+      description: 'A web application that pulls historical stock performance and shows whether the market views it favorably',
       icon: timelineImg
     },
     {
