@@ -66,51 +66,56 @@ const Resume = () => {
     }
   ]
 
-
   return(
     <div className='container'>
       {/*  title */}
-      <div id='portfolio-container'>
+      <div id='portfolio-container-resume'>
         <h1 style={{'color': 'white'}}>My</h1>
-        <h1 className='project-title-projects'>Resume</h1>
+        <h1 id='project-title-projects'>Resume</h1>
       </div>
 
       {/* download resume button */}
       <section className='resume'>
         <button
+          id='resume-button'
           onClick={downloadPDF}
         >
-          Resume
+          Download
         </button>
       </section>
 
       {/* column container */}
-      <div className='resume-container'>
-        <div>
-          {/* education */}
-          {educationContainer.map(item => (
-            <section className='project'>
-              <div className='project-title'>
-                <h3>{item.title}</h3>
-              </div>
-              <p className='description-text'>{item.description}</p>
-            </section>
-            ))
-          }
-        </div>
+      <div className='vertical-container'>
+        <div className='resume-container'>
+          <div>
+            <h1 className='resume-side-title'>Education</h1>
+            {/* education */}
+            {educationContainer.map(item => (
+              <section className='project'>
+                <div className='project-title'>
+                  <h3>{item.title}</h3>
+                </div>
+                <p className='description-text'>{item.description}</p>
+              </section>
+              ))
+            }
+          </div>
 
-        <div>
-          {/* work experience */}
-          {workContainer.map(item => (
-            <section className='project'>
-              <div className='project-title'>
-                <h3>{item.title}</h3>
-              </div>
-              <p className='description-text'>{item.description}</p>
-            </section>
-            ))
-          }
+          <div>
+            <h1 className='resume-side-title'>Work Experience</h1>
+            {/* work experience */}
+            {workContainer.map(item => (
+              <section className='project'>
+                <div className='project-title'>
+                  <h3>{item.title}</h3>
+                </div>
+                <p className='description-text'>{item.description}</p>
+              </section>
+              ))
+            }
+          </div>
         </div>
+        <div className='vertical-bar-right'></div>
       </div>
     </div>
   )

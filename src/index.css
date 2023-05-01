@@ -325,10 +325,24 @@ footer {
   background-color: #1C1C1C;
 }
 
+
+#portfolio-container-resume {
+  width: 10rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.39rem;
+  background-color: #1C1C1C;
+}
+
 #portfolio-container h1 {
   margin-top: 0;
 }
 
+#portfolio-container-resume h1 {
+  margin-top: 0;
+}
 
 #myname {
   margin-left: 0.39rem;
@@ -398,3 +412,20 @@ footer {
   width: 50px;
   border-radius: 30px;
 }
+
+.resume-side-title {
+  color: white;
+  margin-bottom: 5px;
+}
+
+
+#resume-button {
+  border: 1px solid black;
+  padding: 0.39rem;
+  background: #2DCE84;
+  margin: 0;
+  font-size: 0.79rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
