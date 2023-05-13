@@ -5,10 +5,11 @@ import githubLogo from '../../assets/images/githubLogo.jpg';
 import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
 
 function Contact() {
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
-  const { name, email, message } = formState;
+  // unpack each state individually
+  const { name, email, subject, message } = formState;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,24 +53,29 @@ function Contact() {
       </div>
 
       {/* beginning of contact form */}
-      <form onSubmit={handleSubmit}>
-        <input type='text' defaultValue='nnavarro.eontech@gmail.com'/>
-
-        {/* */}
-        
+      <form onSubmit={handleSubmit} className='contact-form-container'>
+        <input type='text' defaultValue='nnavarro.eontech@gmail.com' />
 
         {/* name & email entry */}
         <div className='email-name-form-container'>
-          <input type='text' defaultValue={name} onBlur={handleChange} />
-          <input type="email" defaultValue={email} onBlur={handleChange} />
+          {/* Name */}
+          <input type='text' defaultValue={name} onBlur={handleChange} className='small-contact-info' placeholder='Name'/>
+          {/* Email Address */}
+          <input type="email" defaultValue={email} onBlur={handleChange} className='small-contact-info' placeholder='E-mail'/>
         </div>
 
+        {/* Subject */}
+        <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject'/>
+
+        {/* email message */}
+        <input type='text' defaultValue={message} onBlur={handleChange} placeholder='Message'/>
 
         {errorMessage && (
           <div className='error-msg'>
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
+
         <button className='submitButton' data-testid="button" type="submit">Submit</button>
       </form>
     </section>

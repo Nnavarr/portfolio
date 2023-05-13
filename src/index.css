@@ -475,5 +475,13 @@ footer {
 
 .email-name-form-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.contact-form-container{
+  width: 24rem;
+}
+
+.small-contact-info {
+  width: 100%;
 }
