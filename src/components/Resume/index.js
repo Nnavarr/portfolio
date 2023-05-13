@@ -88,7 +88,9 @@ const Resume = () => {
       <div className='vertical-container'>
         <div className='resume-container'>
           <div>
-            <h1 className='resume-side-title'>Education</h1>
+            <div className='side-title-container'>
+              <h1 className='resume-side-title'>Education</h1>
+            </div>
             {/* education */}
             {educationContainer.map(item => (
               <section className='project'>
@@ -101,8 +103,11 @@ const Resume = () => {
             }
           </div>
 
+          {/* right resume section container */}
           <div>
-            <h1 className='resume-side-title'>Work Experience</h1>
+            <div className='side-title-container'>
+              <h1 className='resume-side-title'>Work Experience</h1>
+            </div>
             {/* work experience */}
             {workContainer.map(item => (
               <section className='project'>

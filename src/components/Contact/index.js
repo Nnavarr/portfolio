@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import instagramLogo from '../../assets/images/IG_New_Color_.jpg';
+import githubLogo from '../../assets/images/githubLogo.jpg';
+import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -34,21 +37,34 @@ function Contact() {
   };
 
   return (
-    <section className='contact-main'>
-      <h1 data-testid="h1tag">Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div className='form-entry'>
-          <label htmlFor="name" id='formName'>Name:</label>
-          <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+    <section className='container'>
+      {/* title */}
+      <div id='portfolio-container-contact'>
+        <h1 style={{'color': 'white'}}>Let's collaborate, </h1>
+        <h1 id='project-title-projects'>get in touch</h1>
+      </div>
+
+      {/* image container */}
+      <div className='logo-container'>
+        <img id='github-logo' src={githubLogo}></img>
+        <img id='ig-logo' src={instagramLogo}></img>
+        <img id='linkedIn-logo' src={linkedInLogo}></img>
+      </div>
+
+      {/* beginning of contact form */}
+      <form onSubmit={handleSubmit}>
+        <input type='text' defaultValue='nnavarro.eontech@gmail.com'/>
+
+        {/* */}
+        
+
+        {/* name & email entry */}
+        <div className='email-name-form-container'>
+          <input type='text' defaultValue={name} onBlur={handleChange} />
+          <input type="email" defaultValue={email} onBlur={handleChange} />
         </div>
-        <div>
-          <label htmlFor="email" id='formLabel'>Email address:</label>
-          <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-        </div>
-        <div className='contact-message'>
-          <label htmlFor="message" className='message-label'>Message:</label>
-          <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-        </div>
+
+
         {errorMessage && (
           <div className='error-msg'>
             <p className="error-text">{errorMessage}</p>
