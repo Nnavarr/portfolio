@@ -54,7 +54,6 @@ function Contact() {
 
       {/* beginning of contact form */}
       <form onSubmit={handleSubmit} className='contact-form-container'>
-        <input type='text' defaultValue='nnavarro.eontech@gmail.com' />
 
         {/* name & email entry */}
         <div className='email-name-form-container'>
@@ -76,7 +75,7 @@ function Contact() {
           </div>
         )}
 
-        <button className='submitButton' data-testid="button" type="submit">Submit</button>
+        <button id='message-button' data-testid="button" type="submit">Submit</button>
       </form>
     </section>
   );

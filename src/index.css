@@ -102,6 +102,11 @@ main {
   overflow: scroll;
 }
 
+input {
+  background-color: #1C1C1C;
+  color: #282828;
+}
+
 .nav-item span:hover {
   color: var(--green-hover);
 }
@@ -480,8 +485,22 @@ footer {
 
 .contact-form-container{
   width: 24rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .small-contact-info {
   width: 100%;
+}
+
+#message-button {
+  border: 1px solid black;
+  padding: 0.39rem;
+  background: #2DCE84;
+  margin: 0;
+  font-size: 0.79rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: medium;
+  width: 50%;
 }
