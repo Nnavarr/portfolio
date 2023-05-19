@@ -67,7 +67,7 @@ function Contact() {
         <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject' className='regular-contact-info'/>
 
         {/* email message */}
-        <input type='text' defaultValue={message} onBlur={handleChange} placeholder='Message' id='message-box'/>
+        <textarea defaultValue={message} onBlur={handleChange} placeholder='Message' id='message-box'/>
 
         {errorMessage && (
           <div className='error-msg'>
