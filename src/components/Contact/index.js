@@ -47,9 +47,15 @@ function Contact() {
 
       {/* image container */}
       <div className='logo-container'>
-        <img id='github-logo' src={githubLogo}></img>
-        <img id='ig-logo' src={instagramLogo}></img>
-        <img id='linkedIn-logo' src={linkedInLogo}></img>
+        <a href='https://github.com/Nnavarr'>
+          <img id='github-logo' src={githubLogo}></img>
+        </a>
+        <a href='https://www.instagram.com/eon.py/'>
+          <img id='ig-logo' src={instagramLogo}></img>
+        </a>
+        <a href='https://www.linkedin.com/in/nnavarr/'>
+          <img id='linkedIn-logo' src={linkedInLogo}></img>
+        </a>
       </div>
 
       {/* beginning of contact form */}
@@ -75,7 +81,7 @@ function Contact() {
           </div>
         )}
         <div className='button-container'>
-          <button id='message-button' data-testid="button" type="submit">Send a Message</button>
+          <button id='message-button' data-testid="button" type="submit" onClick={handleSubmit}>Send a Message</button>
         </div>
       </form>
     </section>
