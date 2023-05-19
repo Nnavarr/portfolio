@@ -58,24 +58,25 @@ function Contact() {
         {/* name & email entry */}
         <div className='email-name-form-container'>
           {/* Name */}
-          <input type='text' defaultValue={name} onBlur={handleChange} className='small-contact-info' placeholder='Name'/>
+          <input type='text' defaultValue={name} onBlur={handleChange} className='small-contact-info-left' placeholder='Name'/>
           {/* Email Address */}
-          <input type="email" defaultValue={email} onBlur={handleChange} className='small-contact-info' placeholder='E-mail'/>
+          <input type="email" defaultValue={email} onBlur={handleChange} className='small-contact-info-right' placeholder='E-mail'/>
         </div>
 
         {/* Subject */}
-        <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject'/>
+        <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject' className='regular-contact-info'/>
 
         {/* email message */}
-        <input type='text' defaultValue={message} onBlur={handleChange} placeholder='Message'/>
+        <input type='text' defaultValue={message} onBlur={handleChange} placeholder='Message' id='message-box'/>
 
         {errorMessage && (
           <div className='error-msg'>
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-
-        <button id='message-button' data-testid="button" type="submit">Submit</button>
+        <div className='button-container'>
+          <button id='message-button' data-testid="button" type="submit">Send a Message</button>
+        </div>
       </form>
     </section>
   );

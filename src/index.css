@@ -489,8 +489,23 @@ footer {
   flex-direction: column;
 }
 
-.small-contact-info {
+.small-contact-info-left {
   width: 100%;
+  height: 2.5rem;
+  margin-right: 5px;
+  border-radius: 12px;
+}
+
+.small-contact-info-right {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 12px;
+}
+
+.regular-contact-info {
+  height: 2.5rem; 
+  margin-top: 5px;
+  border-radius: 12px;
 }
 
 #message-button {
@@ -503,4 +518,16 @@ footer {
   margin-bottom: 10px;
   font-size: medium;
   width: 50%;
+  border-radius: 12px;
+}
+
+#message-box {
+  height: 10rem;
+  margin-top: 5px;
+  border-radius: 12px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }
