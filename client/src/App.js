@@ -6,8 +6,8 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
-import codeBackground from '../src/assets/images/code_background.jpg';
-import rayBackground from '../src/assets/images/ray_background.jpg';
+import codeBackground from './assets/images/code_background.jpg';
+import rayBackground from './assets/images/ray_background.jpg';
 
 function App() {
 

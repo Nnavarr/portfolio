@@ -28,8 +28,6 @@ const createTransporter = async () => {
     });
   });
 
-  console.log(accessToken)
-
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -54,9 +52,12 @@ const sendEmail = async (emailOptions) => {
   await emailTransporter.sendMail(emailOptions);
 }
 
-sendEmail({
-  subject: 'Test',
-  text: 'This is a test',
-  to: 'nnavarro.eontech@gmail.com',
-  from: process.env.EMAIL_USERNAME
-})
+// example email call
+// sendEmail({
+//   subject: 'Test',
+//   text: 'This is an automated email generated from the JS contact form',
+//   to: 'nnavarro.eontech@gmail.com',
+//   from: process.env.EMAIL_USERNAME
+// })
+
+module.exports = { sendEmail };

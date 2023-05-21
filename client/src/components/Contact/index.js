@@ -3,6 +3,7 @@ import { validateEmail } from '../../utils/helpers';
 import instagramLogo from '../../assets/images/IG_New_Color_.jpg';
 import githubLogo from '../../assets/images/githubLogo.jpg';
 import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
+// import sendEmail from '../../utils/email';
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
