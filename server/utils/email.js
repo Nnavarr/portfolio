@@ -60,4 +60,4 @@ const sendEmail = async (emailOptions) => {
 //   from: process.env.EMAIL_USERNAME
 // })
 
-module.exports = { sendEmail };
+module.exports = sendEmail;
