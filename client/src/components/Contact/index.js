@@ -3,23 +3,52 @@ import { validateEmail } from '../../utils/helpers';
 import instagramLogo from '../../assets/images/IG_New_Color_.jpg';
 import githubLogo from '../../assets/images/githubLogo.jpg';
 import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
-// import sendEmail from '../../utils/email';
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+console.log(process.env.EMAIL_USERNAME)
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
+  const [buttonState, setButtonstate] = useState(true);
 
   const [errorMessage, setErrorMessage] = useState('');
   // unpack each state individually
   const { name, email, subject, message } = formState;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!errorMessage) {
+    // if there is no error and state is set to false (not disabled)
+    if (!buttonState) {
+      try {
+        const response = await fetch('http://localhost:3001/sendEmail', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            subject: subject,
+            text: `${email} sent the following message \n ${message}`,
+            from: name
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        const data = await response.json();
+        console.log('The email was successfully sent', data);
+      } catch (error) {
+        console.error('Error', error);
+      }
     }
   };
 
   const handleChange = (e) => {
     if (e.target.name === 'email') {
+      // validate email
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
         setErrorMessage('Your email is invalid.');
@@ -27,15 +56,24 @@ function Contact() {
         setErrorMessage('');
       }
     } else {
+      // validate other inputs
       if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
+        setErrorMessage(`${e.target.name} is required. Please enter a value to continue`);
       } else {
         setErrorMessage('');
       }
-    }
+    } 
+
+    // add value to form state if no validation error
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
+      console.log(buttonState);
     }
+
+    // ensure no errors and all components of an email are present
+    if (!errorMessage && formState.name && formState.email && formState.subject && formState.message) {
+      setButtonstate(false)
+    } 
   };
 
   return (
@@ -65,16 +103,16 @@ function Contact() {
         {/* name & email entry */}
         <div className='email-name-form-container'>
           {/* Name */}
-          <input type='text' defaultValue={name} onBlur={handleChange} className='small-contact-info-left' placeholder='Name'/>
+          <input type='text' defaultValue={name} onBlur={handleChange} className='small-contact-info-left' placeholder='Name' name='name'/>
           {/* Email Address */}
-          <input type="email" defaultValue={email} onBlur={handleChange} className='small-contact-info-right' placeholder='E-mail'/>
+          <input type="email" defaultValue={email} onBlur={handleChange} className='small-contact-info-right' placeholder='E-mail' name='email'/>
         </div>
 
         {/* Subject */}
-        <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject' className='regular-contact-info'/>
+        <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject' className='regular-contact-info' name='subject'/>
 
         {/* email message */}
-        <textarea defaultValue={message} onBlur={handleChange} placeholder='Message' id='message-box'/>
+        <textarea defaultValue={message} onBlur={handleChange} placeholder='Message' id='message-box' name='message'/>
 
         {errorMessage && (
           <div className='error-msg'>
@@ -82,7 +120,7 @@ function Contact() {
           </div>
         )}
         <div className='button-container'>
-          <button id='message-button' data-testid="button" type="submit" onClick={handleSubmit}>Send a Message</button>
+          <button id='message-button' data-testid="button" type="submit" onClick={handleSubmit} disabled={buttonState}>Send a Message</button>
         </div>
       </form>
     </section>

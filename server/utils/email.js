@@ -52,12 +52,4 @@ const sendEmail = async (emailOptions) => {
   await emailTransporter.sendMail(emailOptions);
 }
 
-// example email call
-// sendEmail({
-//   subject: 'Test',
-//   text: 'This is an automated email generated from the JS contact form',
-//   to: 'nnavarro.eontech@gmail.com',
-//   from: process.env.EMAIL_USERNAME
-// })
-
 module.exports = sendEmail;
