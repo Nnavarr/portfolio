@@ -3,11 +3,6 @@ import { validateEmail } from '../../utils/helpers';
 import instagramLogo from '../../assets/images/IG_New_Color_.jpg';
 import githubLogo from '../../assets/images/githubLogo.jpg';
 import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
-const dotenv = require('dotenv');
-
-dotenv.config();
-
-console.log(process.env.EMAIL_USERNAME)
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
@@ -19,6 +14,8 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formState)
+    console.log(buttonState);
     // if there is no error and state is set to false (not disabled)
     if (!buttonState) {
       try {
@@ -29,7 +26,7 @@ function Contact() {
           },
           body: JSON.stringify({
             subject: subject,
-            text: `${email} sent the following message \n ${message}`,
+            text: `${email} sent the following message ${message}`,
             from: name
           })
         });
@@ -47,33 +44,36 @@ function Contact() {
   };
 
   const handleChange = (e) => {
+    let valid = true;
+    let error = '';
+  
     if (e.target.name === 'email') {
-      // validate email
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
-        setErrorMessage('Your email is invalid.');
+        error = 'Your email is invalid.';
+        valid = false;
+      } 
+    } else {
+      if (!e.target.value.length) {
+        error = `${e.target.name} is required. Please enter a value to continue`;
+        valid = false;
+      } 
+    } 
+  
+    setErrorMessage(error);
+  
+    if (valid) {
+      const updatedFormState = { ...formState, [e.target.name]: e.target.value };
+      setFormState(updatedFormState);
+  
+      if (updatedFormState.name && updatedFormState.email && updatedFormState.subject && updatedFormState.message) {
+        setButtonstate(false);
       } else {
-        setErrorMessage('');
+        setButtonstate(true);
       }
     } else {
-      // validate other inputs
-      if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required. Please enter a value to continue`);
-      } else {
-        setErrorMessage('');
-      }
-    } 
-
-    // add value to form state if no validation error
-    if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log(buttonState);
+      setButtonstate(true);
     }
-
-    // ensure no errors and all components of an email are present
-    if (!errorMessage && formState.name && formState.email && formState.subject && formState.message) {
-      setButtonstate(false)
-    } 
   };
 
   return (

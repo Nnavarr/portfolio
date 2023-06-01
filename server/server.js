@@ -12,7 +12,6 @@ app.use(express.json())
 const port = 3001;
 
 app.post('/sendEmail', async (req, res) => {
-  console.log(req.body);
   const { subject, text, from } = req.body;
 
   try {
@@ -22,10 +21,9 @@ app.post('/sendEmail', async (req, res) => {
       to: process.env.EMAIL_USERNAME,
       from
     });
-    res.status(200).send('Email sent successfully');
+    res.status(200).send({"Success": "Email sent successfully"});
   } catch {
-    res.status(500).send('Error sending email');
-    console.log(error);
+    res.status(500).send({"Error": 'Error sending email'});
   }
 });
 
