@@ -418,7 +418,7 @@ footer {
 
 /* project card container */
 .project {
-  height: 15rem;
+  height: 17rem;
   width: 25rem;
   display: flex;
   flex-direction: column;

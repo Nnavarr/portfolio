@@ -51,14 +51,15 @@ const Resume = () => {
     {
       title: 'Financial Analyst',
       subtitle: 'U-Haul International (5/2016 - 2/2019)',
-      description: `Worked in a corporate finance role to assist our department in various Ad-Hoc analyses. This included, but was not limited to:
+      description: [`Worked in a corporate finance role to assist our department in various Ad-Hoc analyses. This included, but was not limited to:`,
 
-      * Quarterly / Annual reporting of various business lines
-      * Financial Analysis of new / existing real estate acquisitions
-      * Statistical Analysis for various investment decisions
+      `* Quarterly / Annual reporting of various business lines`,
+      `* Financial Analysis of new / existing real estate acquisitions`,
+      `* Statistical Analysis for various investment decisions`,
     
-      The use of Python/SQL/R helped to automate our workflow and reporting in order to free-up time for ad-hoc analyses used in Quarterly/Annual shareholder meetings by our CFO, Jason Berg.
+      `The use of Python/SQL/R helped to automate our workflow and reporting in order to free-up time for ad-hoc analyses used in Quarterly/Annual shareholder meetings by our CFO, Jason Berg.
       `
+      ]
     },
 
     {
