@@ -77,6 +77,18 @@ h1 {
   margin-right: 5px;
 }
 
+h5 {
+  margin-top: -15px;
+  margin-bottom: 10px;
+  color: white;
+  opacity: .90;
+}
+
+p {
+  color: white;
+  opacity: .80;
+}
+
 nav ul li span {
   display: flex;
   flex-direction: column;
@@ -248,11 +260,13 @@ footer {
 .error-msg {
   display: flex;
   justify-content: center;
+  
 }
 
 .error-text {
   font-weight: bold;
   color: white;
+  text-align: center;
 }
 
 .contact-message textarea {
@@ -396,6 +410,7 @@ footer {
   flex-direction: row;
 } 
 
+
 #project-title-projects {
   margin-left: 0.39rem;
   color: #2DCE84;
@@ -403,7 +418,7 @@ footer {
 
 /* project card container */
 .project {
-  height: 13rem;
+  height: 15rem;
   width: 25rem;
   display: flex;
   flex-direction: column;
@@ -411,6 +426,7 @@ footer {
   border-radius: 25px;
   padding: 0px 15px 15px 15px;
   margin-bottom: 15px;
+
 }
 
 .github-container {
