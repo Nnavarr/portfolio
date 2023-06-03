@@ -4,6 +4,11 @@ import instagramLogo from '../../assets/images/IG_New_Color_.jpg';
 import githubLogo from '../../assets/images/githubLogo.jpg';
 import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
 
+// Utility function for uppercase
+const upperCase = (text) => {
+  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+}
+
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
   const [buttonState, setButtonstate] = useState(true);
@@ -55,7 +60,7 @@ function Contact() {
       } 
     } else {
       if (!e.target.value.length) {
-        error = `${e.target.name} is required. Please enter a value to continue`;
+        error = `${upperCase(e.target.name)} is required. Please enter a value to continue`;
         valid = false;
       } 
     } 
