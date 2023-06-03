@@ -102,7 +102,7 @@ const Resume = () => {
                 </div>
                 {/* subtitle */}
                 <div className='project-subtitle'>
-                  <h5>{item.subtitle}</h5>
+                  <h4>{item.subtitle}</h4>
                 </div>
 
                 <p className='description-text'>{item.description}</p>
@@ -124,7 +124,7 @@ const Resume = () => {
                 </div>
                 {/* subtitle */}
                 <div className='project-subtitle'>
-                  <h5>{item.subtitle}</h5>
+                  <h4>{item.subtitle}</h4>
                 </div>
                 <p className='description-text'>{item.description}</p>
               </section>
