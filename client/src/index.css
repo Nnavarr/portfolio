@@ -303,6 +303,8 @@ footer {
   width: 60%;
   margin: auto;
   color: white;
+  animation:
+    typewriter 3s steps(30, end), blink .75s step-end infinite;
 }
 
 #gh-image {
@@ -349,6 +351,7 @@ footer {
   align-items: center;
   margin-top: 0.39rem;
   background-color: #1C1C1C;
+  border-radius: 12px;
 }
 
 #portfolio-container-resume {
@@ -359,6 +362,7 @@ footer {
   align-items: center;
   margin-top: 0.39rem;
   background-color: #1C1C1C;
+  border-radius: 12px;
 }
 
 #portfolio-container-contact {
@@ -370,6 +374,7 @@ footer {
   align-items: center;
   margin-top: 0.39rem;
   background-color: #1C1C1C;
+  border-radius: 12px;
 }
 
 #myname {
@@ -391,6 +396,7 @@ footer {
   background: #2DCE84;
   margin: 0;
   font-size: 0.79rem;
+  border-radius: 12px;
 }
 
 #about-container {
@@ -464,6 +470,7 @@ footer {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: medium;
+  border-radius: 12px;
 }
 
 /* contact logos */

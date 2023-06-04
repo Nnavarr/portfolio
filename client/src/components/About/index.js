@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from 'react-type-animation';
 
 const About = () => {
   return(
@@ -26,8 +27,14 @@ const About = () => {
           <div
             id='welcome-container'
           >
-            <h1 style={{ color: 'white', margin: '0'}}>Hello! I'm </h1>
-            <h1 id='myname' style={{ marginTop: '0' }}>Noé Navarro</h1>
+            <TypeAnimation
+              sequence={[
+                "Hello I'm Noé Navarro"
+              ]}
+              style={{ color: 'white', margin: '0'}}
+            />
+            {/* <h1 style={{ color: 'white', margin: '0'}}>Hello! I'm </h1>
+            <h1 id='myname' style={{ marginTop: '0' }}>Noé Navarro</h1> */}
           </div>
           
           {/* full stack dev banner */}
