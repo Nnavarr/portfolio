@@ -27,19 +27,35 @@ const About = () => {
           <div
             id='welcome-container'
           >
-            <TypeAnimation
-              sequence={[
-                "Hello I'm Noé Navarro"
-              ]}
-              style={{ color: 'white', margin: '0'}}
-            />
-            {/* <h1 style={{ color: 'white', margin: '0'}}>Hello! I'm </h1>
-            <h1 id='myname' style={{ marginTop: '0' }}>Noé Navarro</h1> */}
+            {/* <h1 style={{ color: 'white', margin: '0'}}>
+              <TypeAnimation
+                sequence={[
+                  "Hello I'm "
+                ]}
+                style={{ color: 'white', margin: '0'}}
+                cursor={false}
+
+              />
+            </h1> */}
+            <h1 id='myname' style={{ marginTop: '0' }}>
+              <TypeAnimation
+                sequence={[
+                  "Hello I'm  Noé Navarro"
+                ]}
+                cursor={false}
+              />
+            </h1> 
           </div>
           
           {/* full stack dev banner */}
           <div id='title-container'>
-            <h2 id='title'> Full Stack Developer</h2>
+            <h2 id='title'>
+              <TypeAnimation 
+                sequence={['Full Stack Developer', 1000, 'Data Engineer', 1000, 'Financial Analyst', 1000]}
+                repeat={Infinity}
+                startDelay={1000}
+              />
+            </h2>
           </div>
         </div>
         <p id='aboutme-paragraph'>
