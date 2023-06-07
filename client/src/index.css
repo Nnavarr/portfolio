@@ -141,7 +141,6 @@ input {
   height: 10.079rem;
   width: 10.079rem;
   border-radius: 50%;
-
   margin-top: 10px;
   justify-content: center;
 }
@@ -149,6 +148,8 @@ input {
 .home h2 {
   justify-content: center;
 }
+
+.motion
 
 /* about me */
 .aboutme {
