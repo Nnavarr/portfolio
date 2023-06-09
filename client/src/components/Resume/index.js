@@ -2,7 +2,7 @@ import React from "react";
 import { saveAs } from 'file-saver';
 import myResume from '../../assets/docs/noe_navarro_resume.pdf';
 
-const Resume = () => {
+const Resume = ({ backgroundImage }) => {
   // download function
   const downloadPDF = () => {
     saveAs(myResume, 'noe_navarro_resume.pdf');
@@ -70,72 +70,82 @@ const Resume = () => {
   ]
 
   return(
-    <div className='container'>
-      {/*  title */}
-      <div id='portfolio-container-resume'>
-        <h1 style={{'color': 'white'}}>My</h1>
-        <h1 id='project-title-projects'>Resume</h1>
-      </div>
-
-      {/* download resume button */}
-      <section className='resume'>
-        <button
-          id='resume-button'
-          onClick={downloadPDF}
-        >
-          Download
-        </button>
-      </section>
-
-      {/* column container */}
-      <div className='vertical-container'>
-        <div className='resume-container'>
-          <div>
-            <div className='side-title-container'>
-              <h1 className='resume-side-title'>Education</h1>
-            </div>
-            {/* education */}
-            {educationContainer.map(item => (
-              <section className='project'>
-                {/* main title */}
-                <div className='project-title'>
-                  <h3>{item.title}</h3>
-                </div>
-                {/* subtitle */}
-                <div className='project-subtitle'>
-                  <h4>{item.subtitle}</h4>
-                </div>
-
-                <p className='description-text'>{item.description}</p>
-              </section>
-              ))
-            }
-          </div>
-
-          {/* right resume section container */}
-          <div>
-            <div className='side-title-container'>
-              <h1 className='resume-side-title'>Work Experience</h1>
-            </div>
-            {/* work experience */}
-            {workContainer.map(item => (
-              <section className='project'>
-                <div className='project-title'>
-                  <h3>{item.title}</h3>
-                </div>
-                {/* subtitle */}
-                <div className='project-subtitle'>
-                  <h4>{item.subtitle}</h4>
-                </div>
-                <p className='description-text'>{item.description}</p>
-              </section>
-              ))
-            }
-          </div>
+    <main
+      style={{ 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center -45px',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className='container'>
+        {/*  title */}
+        <div id='portfolio-container-resume'>
+          <h1 style={{'color': 'white'}}>My</h1>
+          <h1 id='project-title-projects'>Resume</h1>
         </div>
-        <div className='vertical-bar-right'></div>
+
+        {/* download resume button */}
+        <section className='resume'>
+          <button
+            id='resume-button'
+            onClick={downloadPDF}
+          >
+            Download
+          </button>
+        </section>
+
+        {/* column container */}
+        <div className='vertical-container'>
+          <div className='resume-container'>
+            <div>
+              <div className='side-title-container'>
+                <h1 className='resume-side-title'>Education</h1>
+              </div>
+              {/* education */}
+              {educationContainer.map(item => (
+                <section className='project'>
+                  {/* main title */}
+                  <div className='project-title'>
+                    <h3>{item.title}</h3>
+                  </div>
+                  {/* subtitle */}
+                  <div className='project-subtitle'>
+                    <h4>{item.subtitle}</h4>
+                  </div>
+
+                  <p className='description-text'>{item.description}</p>
+                </section>
+                ))
+              }
+            </div>
+
+            {/* right resume section container */}
+            <div>
+              <div className='side-title-container'>
+                <h1 className='resume-side-title'>Work Experience</h1>
+              </div>
+              {/* work experience */}
+              {workContainer.map(item => (
+                <section className='project'>
+                  <div className='project-title'>
+                    <h3>{item.title}</h3>
+                  </div>
+                  {/* subtitle */}
+                  <div className='project-subtitle'>
+                    <h4>{item.subtitle}</h4>
+                  </div>
+                  <p className='description-text'>{item.description}</p>
+                </section>
+                ))
+              }
+            </div>
+          </div>
+          <div className='vertical-bar-right'></div>
+        </div>
       </div>
-    </div>
+    </main>
   )
 }
 

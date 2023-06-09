@@ -79,15 +79,15 @@ function App() {
             setCurrentCategory={setCurrentCategory}
             handleCategoryChange={handleCategoryChange}
             currentCategory={currentCategory}
-            ></Header>
+            />
 
           {/* page content */}
           <Routes>
-            <Route exact path='/' element={<About />}/>
-            <Route exact path='/aboutme' element={<About />}/>
-            <Route exact path='/portfolio' element={<Portfolio />}/>
-            <Route exact path='/resume' element={<Resume />}/>
-            <Route exact path='/contact' element={<Contact />}/>
+            <Route exact path='/' element={<About backgroundImage={backgroundImg} />}/>
+            <Route exact path='/aboutme' element={<About backgroundImage={backgroundImg} />}/>
+            <Route exact path='/portfolio' element={<Portfolio backgroundImage={backgroundImg} />}/>
+            <Route exact path='/resume' element={<Resume backgroundImage={backgroundImg} />}/>
+            <Route exact path='/contact' element={<Contact backgroundImage={backgroundImg} />}/>
             {/* <main
               style={{ 
                 backgroundImage: `url(${backgroundImg})`,

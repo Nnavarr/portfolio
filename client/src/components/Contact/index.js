@@ -9,7 +9,7 @@ const upperCase = (text) => {
   return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
 }
 
-function Contact() {
+function Contact({ backgroundImage }) {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
   const [buttonState, setButtonstate] = useState(true);
 
@@ -82,53 +82,63 @@ function Contact() {
   };
 
   return (
-    <section className='container'>
-      {/* title */}
-      <div id='portfolio-container-contact'>
-        <h1 style={{'color': 'white'}}>Let's collaborate, </h1>
-        <h1 id='project-title-projects'>get in touch</h1>
-      </div>
-
-      {/* image container */}
-      <div className='logo-container'>
-        <a href='https://github.com/Nnavarr'>
-          <img id='github-logo' src={githubLogo}></img>
-        </a>
-        <a href='https://www.instagram.com/eon.py/'>
-          <img id='ig-logo' src={instagramLogo}></img>
-        </a>
-        <a href='https://www.linkedin.com/in/nnavarr/'>
-          <img id='linkedIn-logo' src={linkedInLogo}></img>
-        </a>
-      </div>
-
-      {/* beginning of contact form */}
-      <form onSubmit={handleSubmit} className='contact-form-container'>
-
-        {/* name & email entry */}
-        <div className='email-name-form-container'>
-          {/* Name */}
-          <input type='text' defaultValue={name} onBlur={handleChange} className='small-contact-info-left' placeholder='Name' name='name'/>
-          {/* Email Address */}
-          <input type="email" defaultValue={email} onBlur={handleChange} className='small-contact-info-right' placeholder='E-mail' name='email'/>
+    <main
+      style={{ 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center -45px',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <section className='container'>
+        {/* title */}
+        <div id='portfolio-container-contact'>
+          <h1 style={{'color': 'white'}}>Let's collaborate, </h1>
+          <h1 id='project-title-projects'>get in touch</h1>
         </div>
 
-        {/* Subject */}
-        <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject' className='regular-contact-info' name='subject'/>
+        {/* image container */}
+        <div className='logo-container'>
+          <a href='https://github.com/Nnavarr'>
+            <img id='github-logo' src={githubLogo}></img>
+          </a>
+          <a href='https://www.instagram.com/eon.py/'>
+            <img id='ig-logo' src={instagramLogo}></img>
+          </a>
+          <a href='https://www.linkedin.com/in/nnavarr/'>
+            <img id='linkedIn-logo' src={linkedInLogo}></img>
+          </a>
+        </div>
 
-        {/* email message */}
-        <textarea defaultValue={message} onBlur={handleChange} placeholder='Message' id='message-box' name='message'/>
+        {/* beginning of contact form */}
+        <form onSubmit={handleSubmit} className='contact-form-container'>
 
-        {errorMessage && (
-          <div className='error-msg'>
-            <p className="error-text">{errorMessage}</p>
+          {/* name & email entry */}
+          <div className='email-name-form-container'>
+            {/* Name */}
+            <input type='text' defaultValue={name} onBlur={handleChange} className='small-contact-info-left' placeholder='Name' name='name'/>
+            {/* Email Address */}
+            <input type="email" defaultValue={email} onBlur={handleChange} className='small-contact-info-right' placeholder='E-mail' name='email'/>
           </div>
-        )}
-        <div className='button-container'>
-          <button id='message-button' data-testid="button" type="submit" onClick={handleSubmit} disabled={buttonState}>Send a Message</button>
-        </div>
-      </form>
-    </section>
+
+          {/* Subject */}
+          <input type='text' defaultValue={subject} onBlur={handleChange} placeholder='Subject' className='regular-contact-info' name='subject'/>
+
+          {/* email message */}
+          <textarea defaultValue={message} onBlur={handleChange} placeholder='Message' id='message-box' name='message'/>
+
+          {errorMessage && (
+            <div className='error-msg'>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
+          <div className='button-container'>
+            <button id='message-button' data-testid="button" type="submit" onClick={handleSubmit} disabled={buttonState}>Send a Message</button>
+          </div>
+        </form>
+      </section>
+    </main>
   );
 }
 

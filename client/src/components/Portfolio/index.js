@@ -8,7 +8,7 @@ import assessmentImg from '../../assets/images/ic_show_chart_24px.svg';
 import shippingImg from '../../assets/images/ic_local_shipping_24px.svg';
 import timelineImg from '../../assets/images/ic_timeline_24px.svg';
 
-const Portfolio = () => {
+const Portfolio = ({ backgroundImage }) => {
 
   const projects = [
     {
@@ -78,10 +78,20 @@ const Portfolio = () => {
   ];
 
   return (
-    <Project
-      projectArray={projects}
-    > 
-    </Project>
+    <main
+      style={{ 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center -45px',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <Project
+        projectArray={projects}
+      > 
+      </Project>
+    </main>
     );
   };
 
