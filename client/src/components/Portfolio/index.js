@@ -1,5 +1,6 @@
 import React from "react";
 import Project from '../Project';
+import { motion } from 'framer-motion/dist/framer-motion'
 import headphoneImg from '../../assets/images/ic_headset_mic_24px.svg';
 import codeImg from '../../assets/images/ic_code_24px.svg';
 import faceImg from '../../assets/images/ic_face_24px.svg';
@@ -78,7 +79,11 @@ const Portfolio = ({ backgroundImage }) => {
   ];
 
   return (
-    <main
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
       style={{ 
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -86,12 +91,12 @@ const Portfolio = ({ backgroundImage }) => {
         backgroundPosition: 'center -45px',
         backgroundAttachment: 'fixed'
       }}
-    >
+      >
       <Project
         projectArray={projects}
       > 
       </Project>
-    </main>
+    </motion.main>
     );
   };
 

@@ -39,21 +39,6 @@ function App() {
   const [currentCategory, setCurrentCategory] = useState('About Me');
   const [backgroundImg, setBackgroundImg] = useState(codeBackground)
 
-  function renderSelection(currentCategory){
-    switch(currentCategory){
-      case 'About Me':
-        return <About></About>
-      case 'Portfolio':
-        return <Portfolio></Portfolio>
-      case 'Resume':
-        return <Resume></Resume>
-      case 'Contact':
-        return <Contact></Contact>
-      default:
-        return <About></About>
-    }
-  }
-
   const backgroundObject = {
     'About Me': codeBackground,
     'Portfolio': rayBackground,
@@ -72,7 +57,7 @@ function App() {
 
   return (
     <div className='App'>
-      <AnimatePresence exitBeforeEnter >
+      <AnimatePresence exitBeforeEnter mode='wait' initial={false} >
         <Router>
           <Header
             categories={categories}
@@ -88,18 +73,6 @@ function App() {
             <Route exact path='/portfolio' element={<Portfolio backgroundImage={backgroundImg} />}/>
             <Route exact path='/resume' element={<Resume backgroundImage={backgroundImg} />}/>
             <Route exact path='/contact' element={<Contact backgroundImage={backgroundImg} />}/>
-            {/* <main
-              style={{ 
-                backgroundImage: `url(${backgroundImg})`,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center -45px',
-                backgroundAttachment: 'fixed'
-              }}
-              > */}
-              {/* Render selected content
-              {renderSelection(currentCategory)} */}
-            {/* </main> */}
           </Routes>
 
           <Footer></Footer>

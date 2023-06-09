@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion/dist/framer-motion';
 import { validateEmail } from '../../utils/helpers';
 import instagramLogo from '../../assets/images/IG_New_Color_.jpg';
 import githubLogo from '../../assets/images/githubLogo.jpg';
@@ -82,7 +83,11 @@ function Contact({ backgroundImage }) {
   };
 
   return (
-    <main
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
       style={{ 
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -138,7 +143,7 @@ function Contact({ backgroundImage }) {
           </div>
         </form>
       </section>
-    </main>
+    </motion.main>
   );
 }
 

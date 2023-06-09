@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'framer-motion/dist/framer-motion';
 import { saveAs } from 'file-saver';
 import myResume from '../../assets/docs/noe_navarro_resume.pdf';
 
@@ -70,7 +71,11 @@ const Resume = ({ backgroundImage }) => {
   ]
 
   return(
-    <main
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
       style={{ 
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -145,7 +150,7 @@ const Resume = ({ backgroundImage }) => {
           <div className='vertical-bar-right'></div>
         </div>
       </div>
-    </main>
+    </motion.main>
   )
 }
 

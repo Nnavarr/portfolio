@@ -7,11 +7,12 @@ const About = ({ backgroundImage }) => {
   const pDelay = 1;
   const dIncrement = .5;
 
-  // extract props from component
-
-
   return(
-    <main
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
       style={{ 
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -168,7 +169,7 @@ const About = ({ backgroundImage }) => {
           </div>
         </section>
       </section>
-    </main>
+    </motion.main>
   )
 }
 
