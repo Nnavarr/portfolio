@@ -73,16 +73,22 @@ function App() {
   return (
     <div className='App'>
       <AnimatePresence exitBeforeEnter >
-        <Routes>
+        <Router>
           <Header
             categories={categories}
             setCurrentCategory={setCurrentCategory}
             handleCategoryChange={handleCategoryChange}
             currentCategory={currentCategory}
             ></Header>
-            <Route exact path='/' element={About}/>
-            <Route exact path='/portfolio' element={Portfolio}/>
-            <main
+
+          {/* page content */}
+          <Routes>
+            <Route exact path='/' element={<About />}/>
+            <Route exact path='/aboutme' element={<About />}/>
+            <Route exact path='/portfolio' element={<Portfolio />}/>
+            <Route exact path='/resume' element={<Resume />}/>
+            <Route exact path='/contact' element={<Contact />}/>
+            {/* <main
               style={{ 
                 backgroundImage: `url(${backgroundImg})`,
                 backgroundSize: 'cover',
@@ -90,12 +96,14 @@ function App() {
                 backgroundPosition: 'center -45px',
                 backgroundAttachment: 'fixed'
               }}
-              >
+              > */}
               {/* Render selected content
               {renderSelection(currentCategory)} */}
-          </main>
+            {/* </main> */}
+          </Routes>
+
           <Footer></Footer>
-        </Routes>
+        </Router>
       </AnimatePresence>
     </div>
   );
