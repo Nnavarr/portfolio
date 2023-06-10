@@ -481,6 +481,13 @@ footer {
   border-radius: 12px;
 }
 
+#resume-button:hover {
+  background: var(--green-hover);
+  color: white;
+  border-color: white;
+  box-shadow: 1px white;
+}
+
 /* contact logos */
 .logo-container {
   display: flex;
