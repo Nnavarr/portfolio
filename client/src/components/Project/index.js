@@ -1,4 +1,6 @@
 import React from "react";
+import reactLogo from '../../assets/images/react.jpg';
+
 
 const Project = (props) => {
   const { projectArray } = props;
@@ -18,8 +20,8 @@ const Project = (props) => {
         </h1>
       </div>
       <div className='project-container'>
-        {projectArray.map((proj) => (
-            <section className='project'>
+        {projectArray.map((proj, projIdx) => (
+            <section key={projIdx} className='project'>
                 <div className='project-title'>
                   <h3>{proj.name}</h3>
                   <img 
@@ -30,10 +32,18 @@ const Project = (props) => {
                 <p className='description-text'>
                   {proj.description}
                 </p>
-                <div className='github-container'>
-                  <a href={proj.repo}>
-                    <img src={require('../../assets/images/githubLogo.jpg')} className='github-img'/>
-                  </a>
+                <div className='img-container'>
+                  <div className='techlogo-container'>
+                    {proj.logos.map((logo, logoIdx) => {
+                      return <img key={logoIdx} src={logo} className='tech-logo' style={{ height: '50px', widght: '50px' }}/>
+                      } 
+                    )}
+                  </div>
+                  <div className='github-container'>
+                    <a href={proj.repo}>
+                      <img src={require('../../assets/images/githubLogo.jpg')} className='github-img'/>
+                    </a>
+                  </div>
                 </div>
             </section>
           ))
