@@ -1,6 +1,4 @@
 import React from "react";
-import reactLogo from '../../assets/images/react.jpg';
-
 
 const Project = (props) => {
   const { projectArray } = props;
@@ -33,11 +31,10 @@ const Project = (props) => {
                   {proj.description}
                 </p>
                 <div className='img-container'>
-                  <div className='techlogo-container'>
-                    {proj.logos.map((logo, logoIdx) => {
-                      return <img key={logoIdx} src={logo} className='tech-logo' style={{ height: '50px', widght: '50px' }}/>
-                      } 
-                    )}
+                  <div className='badge-container'>
+                    {proj.badges.map((badge, badgeIdx) => {
+                      return <img key={badgeIdx} src={badge} className='badge'/>
+                    })}
                   </div>
                   <div className='github-container'>
                     <a href={proj.repo}>

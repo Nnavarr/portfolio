@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className='App'>
-      <AnimatePresence exitBeforeEnter mode='wait' initial={false} >
+      <AnimatePresence exitBeforeEnter mode='wait' initial={true} >
         <Router>
           <Header
             categories={categories}
