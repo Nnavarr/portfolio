@@ -498,8 +498,9 @@ footer {
 .badge-container {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-evenly;
   align-items: center;
+
 }
 
 .badge {
@@ -604,3 +605,99 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+/* tech stack labels */
+.mongodb-badge {
+  background-color: #E8E7D5;
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.express-badge {
+  background-color: #68a063;
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.react-badge {
+  background-color: rgb(0, 140, 255);
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.node-badge {
+  background-color: greenyellow;
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.javaScript-badge {
+  background-color: yellow;
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.html-badge {
+  background-color: rgb(0, 169, 241);
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.css-badge {
+  background-color: orange;
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.r-script-badge {
+  background-color: rgb(0, 217, 255);
+  height: 30px;
+  width: 80px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.tech-badge-text {
+  color: black;
+  padding: 10px;
+
+}
+

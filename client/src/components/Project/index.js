@@ -32,9 +32,13 @@ const Project = (props) => {
                 </p>
                 <div className='img-container'>
                   <div className='badge-container'>
-                    {proj.badges.map((badge, badgeIdx) => {
-                      return <img key={badgeIdx} src={badge} className='badge'/>
-                    })}
+                  {proj.badges.map((badge, badgeIdx) => {
+                    return (
+                      <div key={badgeIdx} className={badge + '-badge'}>
+                        <h5 className='tech-badge-text'>{badge}</h5>
+                      </div>
+                    );
+                  })}
                   </div>
                   <div className='github-container'>
                     <a href={proj.repo}>

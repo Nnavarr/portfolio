@@ -10,10 +10,6 @@ import shippingImg from '../../assets/images/ic_local_shipping_24px.svg';
 import timelineImg from '../../assets/images/ic_timeline_24px.svg';
 
 const Portfolio = ({ backgroundImage }) => {
-  // badge locations
-  const htmlBadge = 'https://camo.githubusercontent.com/97cfeca0dbaee6a8e0b8e0109ef2d00707615dfe8dc9315f9a9a07eace3d1103/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d48544d4c2d6f72616e6765';
-  const javaScriptBadge = 'https://camo.githubusercontent.com/096944afd2e5aa37fb9691d46e073f794d158f64643545cd8acf9d06c459cb41/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4a532d79656c6c6f77';
-  const cssBadge = 'https://camo.githubusercontent.com/c8624333a315b8d451ef28bb0dfd688834e261f418c8fca0ad63da2fd1c85c01/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4353532d626c7565';
 
   const projects = [
     {
@@ -25,7 +21,7 @@ const Portfolio = ({ backgroundImage }) => {
       description: 'A full-stack application built using the MERN stack (MongoDB, Express, React, Node.js) that allows parents to create and assign tasks to their children, and children to earn points and rewards for completing their tasks.',
       icon: faceImg,
       badges: [
-        javaScriptBadge, htmlBadge, cssBadge
+        'mongodb', 'express', 'react', 'node'
       ]
     },
     {
@@ -37,7 +33,7 @@ const Portfolio = ({ backgroundImage }) => {
       description: 'A full-stack web application built using the MERN stack that allows users to post and respond to content in a Reddit-like fashion. The application includes features such as user authentication, profile creation, post creation, and commenting.',
       icon: headphoneImg,
       badges: [
-        javaScriptBadge, htmlBadge, cssBadge
+        'javaScript', 'html', 'css'
       ]
 
     },
@@ -50,7 +46,7 @@ const Portfolio = ({ backgroundImage }) => {
       description: 'A social media API built using MongoDB, Mongoose, Express, and Node.js. It includes two main schemas, User and Thought, and allows for CRUD operations on both.',
       icon: codeImg,
       badges: [
-        javaScriptBadge, htmlBadge, cssBadge
+        'javaScript', 'html', 'css'
       ]
     },
     {
@@ -62,7 +58,7 @@ const Portfolio = ({ backgroundImage }) => {
       description: 'A fitness training website built with core HTML & CSS in mind. This was created to simulate a real-world example of a single page website for a local business.',
       icon: weightImg,
       badges: [
-        javaScriptBadge, htmlBadge, cssBadge
+        'html', 'css'
       ]
     },
     {
@@ -74,7 +70,7 @@ const Portfolio = ({ backgroundImage }) => {
       description: 'A web application that pulls historical stock performance and shows whether the market views it favorably',
       icon: timelineImg,
       badges: [
-        javaScriptBadge, htmlBadge, cssBadge
+        'javaScript', 'html', 'css'
       ]
     },
     {
@@ -86,7 +82,7 @@ const Portfolio = ({ backgroundImage }) => {
       description: 'An R based web app that tracks various market interest rates',
       icon: assessmentImg,
       badges: [
-        javaScriptBadge
+        'r-script'
       ]
     },
     {
@@ -98,7 +94,7 @@ const Portfolio = ({ backgroundImage }) => {
       description: 'An R based web app that uses Multiple Linear Regression to assist in forecasting next years amount on a monthly basis. The user can uplaod a csv with month and value columns',
       icon: shippingImg,
       badges: [
-        javaScriptBadge
+        'r-script'
       ]
     }
   ];
