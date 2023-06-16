@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = (props) => {
   const { projectArray } = props;
-
+  
   return (
     <div className='container'>
       <div id='portfolio-container'>
