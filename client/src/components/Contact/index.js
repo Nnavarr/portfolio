@@ -106,13 +106,13 @@ function Contact({ backgroundImage }) {
         {/* image container */}
         <div className='logo-container'>
           <a href='https://github.com/Nnavarr'>
-            <img id='github-logo' src={githubLogo}></img>
+            <img id='github-logo' className='social-logo' src={githubLogo}></img>
           </a>
           <a href='https://www.instagram.com/eon.py/'>
-            <img id='ig-logo' src={instagramLogo}></img>
+            <img id='ig-logo' className='social-logo' src={instagramLogo}></img>
           </a>
           <a href='https://www.linkedin.com/in/nnavarr/'>
-            <img id='linkedIn-logo' src={linkedInLogo}></img>
+            <img id='linkedIn-logo' className='social-logo' src={linkedInLogo}></img>
           </a>
         </div>
 

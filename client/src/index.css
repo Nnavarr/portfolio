@@ -457,6 +457,11 @@ footer {
   border-radius: 30px;
 }
 
+.github-img:hover {
+  border: 1px solid white;
+  box-shadow: 0px 0px 15px 5px rgba(255,255,255,0.75);
+}
+
 .side-title-container {
   display: flex;
   flex-direction: row;
@@ -587,6 +592,13 @@ footer {
   border-radius: 12px;
 }
 
+#message-button:hover {
+  background: var(--green-hover);
+  color: white;
+  border-color: white;
+  box-shadow: 1px white;
+}
+
 #message-box {
   height: 10rem;
   margin-top: 5px;
@@ -698,6 +710,9 @@ footer {
 .tech-badge-text {
   color: black;
   padding: 10px;
-
 }
 
+.social-logo:hover {
+  border: 1px solid white;
+  box-shadow: 0px 0px 15px 5px rgba(255,255,255,0.75);
+}
