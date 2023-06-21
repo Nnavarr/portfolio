@@ -2,17 +2,16 @@ const express = require('express');
 const sendEmail = require('./utils/email');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const path = require('path'); // make sure you have imported 'path' module
 
 dotenv.config()
 
-// instantiate express object
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(cors());
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
-
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.post('/sendEmail', async (req, res) => {
   const { subject, text, from } = req.body;
@@ -25,15 +24,16 @@ app.post('/sendEmail', async (req, res) => {
       from
     });
     res.status(200).send({"Success": "Email sent successfully"});
-  } catch {
+  } catch (error) {
+    console.error(error);
     res.status(500).send({"Error": 'Error sending email'});
   }
 });
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
-})
+});
 
 app.listen(PORT, () => {
-  console.log(`The express server is listening on port ${PORT}`)
-})
+  console.log(`The express server is listening on port ${PORT}`);
+});
