@@ -6,10 +6,8 @@ const cors = require('cors');
 dotenv.config()
 
 // instantiate express object
+const PORT = process.env.PORT || 3001;
 const app = express();
-app.use(cors());
-app.use(express.json())
-const port = 3001;
 
 app.post('/sendEmail', async (req, res) => {
   const { subject, text, from } = req.body;
@@ -27,6 +25,14 @@ app.post('/sendEmail', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`The express server is listening on port ${port}`)
+app.use(cors());
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+})
+
+app.listen(PORT, () => {
+  console.log(`The express server is listening on port ${PORT}`)
 })
