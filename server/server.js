@@ -13,22 +13,22 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.post('/sendEmail', async (req, res) => {
-  const { subject, text, from } = req.body;
+// app.post('/sendEmail', async (req, res) => {
+//   const { subject, text, from } = req.body;
 
-  try {
-    await sendEmail({
-      subject,
-      text,
-      to: process.env.EMAIL_USERNAME,
-      from
-    });
-    res.status(200).send({"Success": "Email sent successfully"});
-  } catch (error) {
-    console.error(error);
-    res.status(500).send({"Error": 'Error sending email'});
-  }
-});
+//   try {
+//     await sendEmail({
+//       subject,
+//       text,
+//       to: process.env.EMAIL_USERNAME,
+//       from
+//     });
+//     res.status(200).send({"Success": "Email sent successfully"});
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send({"Error": 'Error sending email'});
+//   }
+// });
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
