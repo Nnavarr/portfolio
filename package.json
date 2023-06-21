@@ -22,5 +22,8 @@
   "homepage": "https://github.com/Nnavarr/portfolio#readme",
   "devDependencies": {
     "concurrently": "^8.0.1"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
