@@ -9,6 +9,11 @@ dotenv.config()
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+app.use(cors());
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
+
 app.post('/sendEmail', async (req, res) => {
   const { subject, text, from } = req.body;
 
@@ -24,10 +29,6 @@ app.post('/sendEmail', async (req, res) => {
     res.status(500).send({"Error": 'Error sending email'});
   }
 });
-
-app.use(cors());
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
