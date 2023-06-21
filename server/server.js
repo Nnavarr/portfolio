@@ -1,7 +1,7 @@
 const express = require('express');
 const sendEmail = require('./utils/email');
 const dotenv = require('dotenv');
-const cors = require('cors');
+// const cors = require('cors');
 const path = require('path'); // make sure you have imported 'path' module
 
 dotenv.config()
@@ -9,7 +9,7 @@ dotenv.config()
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
