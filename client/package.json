@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "http://nnavarr.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.12",
