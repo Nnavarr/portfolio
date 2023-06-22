@@ -8,9 +8,6 @@ import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
 const dotenv = require('dotenv');
 dotenv.config()
 
-console.log(process.env);
-console.log(process.env.REACT_APP_BACKEND_URL);
-
 // Utility function for uppercase
 const upperCase = (text) => {
   return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
