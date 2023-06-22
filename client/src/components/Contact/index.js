@@ -23,8 +23,7 @@ function Contact({ backgroundImage }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formState)
-    console.log(buttonState);
+    
     // if there is no error and state is set to false (not disabled)
     if (!buttonState) {
       try {
