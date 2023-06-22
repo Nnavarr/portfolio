@@ -5,6 +5,12 @@ import instagramLogo from '../../assets/images/IG_New_Color_.jpg';
 import githubLogo from '../../assets/images/githubLogo.jpg';
 import linkedInLogo from '../../assets/images/linkedInLogo.jpg';
 
+const dotenv = require('dotenv');
+dotenv.config()
+
+console.log(process.env);
+console.log(process.env.REACT_APP_BACKEND_URL);
+
 // Utility function for uppercase
 const upperCase = (text) => {
   return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
@@ -25,7 +31,7 @@ function Contact({ backgroundImage }) {
     // if there is no error and state is set to false (not disabled)
     if (!buttonState) {
       try {
-        const response = await fetch('http://localhost:3001/sendEmail', {
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/sendEmail', {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
