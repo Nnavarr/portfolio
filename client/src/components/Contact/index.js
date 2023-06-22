@@ -24,20 +24,10 @@ function Contact({ backgroundImage }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(process.env.REACT_APP_BACKEND_URL)
-
 
     // if there is no error and state is set to false (not disabled)
     if (!buttonState) {
       try {
-        // console log variables
-        console.log()
-        console.log('Email', email);
-        console.log('Subject', subject);
-        console.log('Message', message);
-        console.log('Name', name)
-
-
         const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/sendEmail', {
           method: "POST",
           headers: {
@@ -55,9 +45,9 @@ function Contact({ backgroundImage }) {
         }
 
         const data = await response.json();
-        console.log('The email was successfully sent', data);
+        // console.log('The email was successfully sent', data);
       } catch (error) {
-        console.error('Error', error);
+        // console.error('Error', error);
       }
     }
   };
