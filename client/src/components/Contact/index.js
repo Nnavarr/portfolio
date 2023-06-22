@@ -23,7 +23,9 @@ function Contact({ backgroundImage }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    console.log(process.env.REACT_APP_BACKEND_URL)
+
     // if there is no error and state is set to false (not disabled)
     if (!buttonState) {
       try {
