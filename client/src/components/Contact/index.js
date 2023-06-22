@@ -26,9 +26,18 @@ function Contact({ backgroundImage }) {
 
     console.log(process.env.REACT_APP_BACKEND_URL)
 
+
     // if there is no error and state is set to false (not disabled)
     if (!buttonState) {
       try {
+        // console log variables
+        console.log()
+        console.log('Email', email);
+        console.log('Subject', subject);
+        console.log('Message', message);
+        console.log('Name', name)
+
+
         const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/sendEmail', {
           method: "POST",
           headers: {
