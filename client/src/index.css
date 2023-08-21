@@ -53,13 +53,6 @@ header {
   position: relative;
 }
 
-/* @media screen and (max-width: 480px) {
-  .nav-bar {
-    display: block;
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
-
 header nav {
   top: 0;
   left: 0;
@@ -132,6 +125,11 @@ input {
 .nav-item span {
   flex: 1;
   color: #2DCE84;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
 }
 
 /* home */
@@ -232,10 +230,21 @@ footer {
 
 .nav-bar {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+  width: 100%;
+  height: 100%; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .contact-main {
