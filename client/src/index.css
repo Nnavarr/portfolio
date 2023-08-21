@@ -277,6 +277,15 @@ footer {
   align-items: center;
 }
 
+@media screen and (max-width: 320px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+}
+
 .message-label {
   padding-bottom: 10px;
 }
@@ -416,6 +425,24 @@ footer {
   margin-top: 0.39rem;
   background-color: #1C1C1C;
   border-radius: 12px;
+}
+
+@media screen and (max-width: 320px) {
+  #portfolio-container-contact {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.39rem;
+    background-color: #1C1C1C;
+    border-radius: 12px;
+  }
+
+  #portfolio-container-contact h1 {
+    font-size: 1.1rem;
+  }
 }
 
 #myname {
@@ -619,7 +646,7 @@ footer {
 }
 
 .contact-form-container{
-  width: 24rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
