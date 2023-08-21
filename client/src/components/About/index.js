@@ -1,6 +1,6 @@
 import React from "react";
 import { TypeAnimation } from 'react-type-animation';
-import { AnimatePresence, motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion/dist/framer-motion'
 
 const About = ({ backgroundImage }) => {
   // frame-motion vars
@@ -95,7 +95,7 @@ const About = ({ backgroundImage }) => {
                 duration: 1,
                 delay: pDelay
               }}
-              >
+            >
               I’m a full stack developer with a background in corporate finance. I’m passionate about leveraging technology to solve problems and create efficient and effective solutions.
               <br></br>
               <br></br>

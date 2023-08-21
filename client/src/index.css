@@ -333,6 +333,12 @@ footer {
     margin: auto;
     color: white;
   }
+
+  .description-text {
+    text-align: center;
+  }
+
+
 }
 
 #gh-image {
@@ -430,7 +436,6 @@ footer {
 #about-container {
   background: rgba(0, 0, 0, 0.75);
   border: none;
-  height: 100%;
 }
 
 #footer-message {
@@ -468,6 +473,9 @@ footer {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .img-container {
