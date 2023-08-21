@@ -322,6 +322,19 @@ footer {
   color: white;
 }
 
+@media screen and (max-width: 425px){
+  #aboutme-paragraph {
+    display: flex;
+    font-size: 0.78rem;
+    padding: 0.39rem;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    color: white;
+  }
+}
+
 #gh-image {
   height: 50px;
   /* margin-bottom: 400px; */
