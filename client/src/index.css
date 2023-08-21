@@ -206,6 +206,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -446,6 +447,27 @@ footer {
   border-radius: 25px;
   padding: 0px 15px 15px 15px;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 425px) {
+  .project {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  .badge-container {
+    width: 100%;
+  }
+
+  .github-container {
+    width: 100%
+  }
 }
 
 .project:hover {
@@ -725,4 +747,10 @@ footer {
 .social-logo:hover {
   border: 1px solid white;
   box-shadow: 0px 0px 15px 5px rgba(255,255,255,0.75);
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
