@@ -104,44 +104,48 @@ const Resume = ({ backgroundImage }) => {
         {/* column container */}
         <div className='vertical-container'>
           <div className='resume-container'>
-            <div className='side-title-container'>
-              <h1 className='resume-side-title'>Education</h1>
-            </div>
-            {/* education */}
-            {educationContainer.map(item => (
-              <section className='project'>
-                {/* main title */}
-                <div className='project-title'>
-                  <h3>{item.title}</h3>
-                </div>
-                {/* subtitle */}
-                <div className='project-subtitle'>
-                  <h4>{item.subtitle}</h4>
-                </div>
+            <div>
+              <div className='side-title-container'>
+                <h1 className='resume-side-title'>Education</h1>
+              </div>
+              {/* education */}
+              {educationContainer.map(item => (
+                <section className='project'>
+                  {/* main title */}
+                  <div className='project-title'>
+                    <h3>{item.title}</h3>
+                  </div>
+                  {/* subtitle */}
+                  <div className='project-subtitle'>
+                    <h4>{item.subtitle}</h4>
+                  </div>
 
-                <p className='description-text'>{item.description}</p>
-              </section>
-              ))
-            }
-  
-            {/* right resume section container */}
-            <div className='side-title-container'>
-              <h1 className='resume-side-title'>Work Experience</h1>
+                  <p className='description-text'>{item.description}</p>
+                </section>
+                ))
+              }
             </div>
-            {/* work experience */}
-            {workContainer.map(item => (
-              <section className='project'>
-                <div className='project-title'>
-                  <h3>{item.title}</h3>
-                </div>
-                {/* subtitle */}
-                <div className='project-subtitle'>
-                  <h4>{item.subtitle}</h4>
-                </div>
-                <p className='description-text'>{item.description}</p>
-              </section>
-              ))
-            }
+
+            {/* right resume section container */}
+            <div>
+              <div className='side-title-container'>
+                <h1 className='resume-side-title'>Work Experience</h1>
+              </div>
+              {/* work experience */}
+              {workContainer.map(item => (
+                <section className='project'>
+                  <div className='project-title'>
+                    <h3>{item.title}</h3>
+                  </div>
+                  {/* subtitle */}
+                  <div className='project-subtitle'>
+                    <h4>{item.subtitle}</h4>
+                  </div>
+                  <p className='description-text'>{item.description}</p>
+                </section>
+                ))
+              }
+            </div>
           </div>
           <div className='vertical-bar-right'></div>
         </div>
