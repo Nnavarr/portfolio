@@ -64,7 +64,7 @@ function Contact({ backgroundImage }) {
       } 
     } else {
       if (!e.target.value.length) {
-        error = `${upperCase(e.target.name)} is required. Please enter a value to continue`;
+        error = `${upperCase(e.target.name)} is required. Please enter a value`;
         valid = false;
       } 
     } 
