@@ -481,14 +481,6 @@ footer {
   .img-container {
     width: 100%;
   }
-
-  .badge-container {
-    width: 100%;
-  }
-
-  .github-container {
-    width: 100%
-  }
 }
 
 .project:hover {
@@ -502,6 +494,15 @@ footer {
   justify-content: right;
   position: relative;
   right: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .github-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
 }
 
 .github-img {
@@ -558,7 +559,17 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
 
+@media screen and (max-width: 425px) {
+  .badge-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 1rem;
+    justify-items: center;
+  }
 }
 
 .badge {
